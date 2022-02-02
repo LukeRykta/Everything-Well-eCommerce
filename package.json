@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/LukeRykta/SoftwareDesign/issues"
   },
-  "homepage": "https://github.com/LukeRykta/SoftwareDesign#readme"
+  "homepage": "https://github.com/LukeRykta/SoftwareDesign#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
