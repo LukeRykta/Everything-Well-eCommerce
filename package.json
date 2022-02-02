@@ -1,0 +1,20 @@
+{
+  "name": "softwaredesign",
+  "version": "1.0.0",
+  "description": "Software Engineering Group Project Spring 2022",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeRykta/SoftwareDesign.git"
+  },
+  "keywords": [],
+  "author": "Luke Ryktarsyk, Duong Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeRykta/SoftwareDesign/issues"
+  },
+  "homepage": "https://github.com/LukeRykta/SoftwareDesign#readme"
+}
