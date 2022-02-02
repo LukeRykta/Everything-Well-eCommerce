@@ -1,15 +1,20 @@
-const http = require('http');
+const express = require('express');
 
+const app = express();
 const hostname = '127.0.0.1';
-const port = 3000;
 
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
+const port = process.env.PORT || 5000;
+
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
 });
 
-server.listen(port, hostname, () => {
+app.use((req, res, next) => {
+    res.send('Welcome to Express');
+});
+
+app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
-    console.log(`this is a test`);
 });
