@@ -41,7 +41,7 @@ class Todo extends Component {
 
         return (
             <div>
-                <h1>My Todo(s)</h1>
+                <h1>Enter an item to add to your list</h1>
                 <Input getTodos={this.getTodos} />
                 <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
             </div>
