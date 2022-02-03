@@ -6,4 +6,3 @@ Duong Nguyen
 Stephanie Younes
 Stran Dutton
 Patrick 
-![](../../Downloads/discordserv.png)
