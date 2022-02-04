@@ -47,8 +47,9 @@ npm run dev
 ```
 The page should open in your default browser.
 
+___
 
-### Insomnia Client Setup
+### Insomnia Client Setup for API dev
 1. Download the client at <https://insomnia.rest/download>
 2. Launch the client
 3. Hover over "create" and select "request collection"
