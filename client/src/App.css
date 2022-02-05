@@ -27,7 +27,7 @@ button {
   margin-left: 10px;
   font-size: 25px;
   background: #101113;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #787a80;
   cursor: pointer;
 }
@@ -37,11 +37,11 @@ button:focus {
 }
 
 ul {
-  list-style: none;
+  list-style: inside;
   text-align: left;
   padding: 15px;
   background: #171a1f;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 li {
