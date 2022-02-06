@@ -6,13 +6,13 @@
   margin-right: auto;
 }
 
-.App2 {
+.Home {
   text-align: center;
   font-size: calc(10px + 2vmin);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  color: #6f88d5;
+  color: #ffffff;
 }
 
 input {
@@ -23,6 +23,10 @@ input {
   background: none;
   font-size: 1.5rem;
   color: #6f88d5;
+}
+
+.link {
+  color: #8b9f97;
 }
 
 input:focus {
@@ -64,15 +68,14 @@ li {
   cursor: pointer;
 }
 
-video {
-  object-fit: cover;
-  width: 100vw;
+.BackgroundImage {
+  background-image: url("views/background.jpg");
+  flex: auto;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 300px) {
