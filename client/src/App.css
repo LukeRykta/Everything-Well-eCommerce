@@ -17,7 +17,7 @@
 }
 
 .HomeBackground {
-  background-image: url("views/background.jpg");
+  background-image: url("views/assets/background.jpg");
   flex: auto;
   height: 100vh;
   background-size: cover;
@@ -61,7 +61,7 @@ button:focus {
 }
 
 ul {
-  list-style: inside;
+  list-style: inherit;
   text-align: left;
   padding: 15px;
   background: #171a1f;
@@ -80,7 +80,7 @@ li {
 }
 
 .NotFoundBackground{
-  background-image: url("views/dc.png");
+  background-image: url("views/assets/dc.png");
   flex: auto;
   height: 100vh;
   background-size: auto;
