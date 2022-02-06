@@ -6,7 +6,7 @@ const ListTest = () => {
     return (
         <div className="App">
             <Todo/>
-            <Link to="/"><h2>Return to Home</h2></Link>
+            <Link to="/" className="Home"><h2>Return to Home</h2></Link>
         </div>
     );
 };

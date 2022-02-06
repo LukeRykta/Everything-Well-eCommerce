@@ -12,7 +12,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  color: #ffffff;
+  color: #8f9bd2;
 }
 
 input {
@@ -68,11 +68,21 @@ li {
   cursor: pointer;
 }
 
-.BackgroundImage {
+.HomeBackground {
   background-image: url("views/background.jpg");
   flex: auto;
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.NotFoundBackground{
+  background-image: url("views/dc.png");
+  flex: auto;
+  height: 100vh;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;

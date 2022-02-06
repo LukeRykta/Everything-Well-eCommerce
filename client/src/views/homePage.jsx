@@ -3,11 +3,15 @@ import {Link} from "react-router-dom";
 
 const MainPage = () => {
     return(
-        <div className="BackgroundImage">
+        <div className="HomeBackground">
             <div className="Home">
                 <h1>Welcome to the Home Page</h1>
-                    <h2>Hope you enjoy your stay~</h2>
-                <Link to="/todoPage" className="link">Click here for TODO page</Link>
+                <h2>Enjoy Your Stay~</h2>
+                <ul>
+                    <Link to="/todoPage" className="Home"><li>TO-DO</li></Link>
+                    <Link to="/404" className="Home"><li>Purpose in life </li></Link>
+                    <Link to="/404" className="Home"><li>Wesley's Marbles</li></Link>
+                </ul>
             </div>
         </div>
 
