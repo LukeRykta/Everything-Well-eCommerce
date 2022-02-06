@@ -9,14 +9,12 @@ const MainPage = () => {
                 <h2>Enjoy Your Stay~</h2>
                 <ul>
                     <Link to="/todoPage" className="Home"><li>TO-DO</li></Link>
-                    <Link to="/404" className="Home"><li>Purpose in life </li></Link>
-                    <Link to="/404" className="Home"><li>Wesley's Marbles</li></Link>
+                    <Link to="/404" className="Home"><li>Meaning of Life</li></Link>
                 </ul>
             </div>
         </div>
 
     );
 }
-
 
 export default MainPage;

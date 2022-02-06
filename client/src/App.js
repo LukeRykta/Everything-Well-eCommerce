@@ -10,7 +10,7 @@ function App () {
       <BrowserRouter>
           <Routes>
               <Route path="/" element={<MainPage />} />
-              <Route path="/404" element={<NotFoundPage />} />
+              <Route path="*" element={<NotFoundPage />} />
               <Route path="/todoPage" element={<ListTest />} />
           </Routes>
       </BrowserRouter>

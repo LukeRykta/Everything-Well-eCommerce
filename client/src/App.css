@@ -6,6 +6,7 @@
   margin-right: auto;
 }
 
+
 .Home {
   text-align: center;
   font-size: calc(10px + 2vmin);
@@ -13,6 +14,16 @@
   margin-left: auto;
   margin-right: auto;
   color: #8f9bd2;
+}
+
+.HomeBackground {
+  background-image: url("views/background.jpg");
+  flex: auto;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 input {
@@ -66,16 +77,6 @@ li {
   border-radius: 5px;
   overflow-wrap: break-word;
   cursor: pointer;
-}
-
-.HomeBackground {
-  background-image: url("views/background.jpg");
-  flex: auto;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
 }
 
 .NotFoundBackground{
