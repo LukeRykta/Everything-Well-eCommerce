@@ -1,13 +1,20 @@
 import React from 'react';
-import Todo from './components/Todo';
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import MainPage from "./views/homePage";
+import NotFoundPage from "./views/404Page";
+import ListTest from "./views/todoPage";
 
-const App = () => {
+function App () {
   return (
-      <div className="App">
-        <Todo />
-      </div>
+      <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+              <Route path="/todoPage" element={<ListTest />} />
+          </Routes>
+      </BrowserRouter>
   );
-};
+}
 
 export default App;

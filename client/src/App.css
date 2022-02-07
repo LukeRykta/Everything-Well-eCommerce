@@ -6,6 +6,26 @@
   margin-right: auto;
 }
 
+
+.Home {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(143, 155, 210, 0.79);
+}
+
+.HomeBackground {
+  background-image: url("views/assets/background.jpg");
+  flex: auto;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
 input {
   height: 40px;
   width: 50%;
@@ -13,7 +33,11 @@ input {
   border-bottom: 2px #787a80 solid;
   background: none;
   font-size: 1.5rem;
-  color: #787a80;
+  color: #6f88d5;
+}
+
+.link {
+  color: #8b9f97;
 }
 
 input:focus {
@@ -27,8 +51,8 @@ button {
   margin-left: 10px;
   font-size: 25px;
   background: #101113;
-  border-radius: 5px;
-  color: #787a80;
+  border-radius: 10px;
+  color: #6f88d5;
   cursor: pointer;
 }
 
@@ -37,11 +61,12 @@ button:focus {
 }
 
 ul {
-  list-style: none;
+  list-style: inherit;
   text-align: left;
   padding: 15px;
   background: #171a1f;
-  border-radius: 5px;
+  border-radius: 15px;
+  color: #6f88d5;
 }
 
 li {
@@ -52,6 +77,16 @@ li {
   border-radius: 5px;
   overflow-wrap: break-word;
   cursor: pointer;
+}
+
+.NotFoundBackground{
+  background-image: url("views/assets/dc.png");
+  flex: auto;
+  height: 100vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
 
 @media only screen and (min-width: 300px) {

@@ -44,6 +44,7 @@ class Todo extends Component {
                 <h1>Enter an item to add to your list</h1>
                 <Input getTodos={this.getTodos} />
                 <ListTodo todos={todos} deleteTodo={this.deleteTodo} />
+                <h2>Or click an item to delete it</h2>
             </div>
         );
     }

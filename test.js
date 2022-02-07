@@ -1,11 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const routes = require('./routes/api');
 require('dotenv').config();
 
 const app = express();
-const hostname = '127.0.0.1';
+
 
 const port = process.env.PORT || 5000;
 
@@ -24,7 +24,8 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
 
 app.use('/api', routes);
 
@@ -33,6 +34,7 @@ app.use((err, req, res, next) => {
     next();
 });
 
+const hostname = '127.0.0.1';
 app.listen(port, () => {
     console.log(`Server running at http://${hostname}:${port}/`);
 });
