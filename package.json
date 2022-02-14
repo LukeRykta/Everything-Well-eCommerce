@@ -2,7 +2,7 @@
   "name": "softwaredesign",
   "version": "1.0.0",
   "description": "Software Engineering Group Project Spring 2022",
-  "main": "test.js",
+  "main": "server.js",
   "scripts": {
     "start": "node index.js",
     "start-watch": "nodemon index.js",

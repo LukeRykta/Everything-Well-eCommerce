@@ -1,11 +1,10 @@
-.App {
+.Todo {
   text-align: center;
   font-size: calc(10px + 2vmin);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .Home {
   text-align: center;
@@ -16,14 +15,13 @@
   color: rgba(143, 155, 210, 0.79);
 }
 
-.HomeBackground {
-  background-image: url("views/assets/background.jpg");
-  flex: auto;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  overflow: hidden;
+.Page {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(143, 155, 210, 0.79);
 }
 
 input {
@@ -80,7 +78,7 @@ li {
 }
 
 .NotFoundBackground{
-  background-image: url("views/assets/dc.png");
+  background-image: url("../assets/dc.png");
   flex: auto;
   height: 100vh;
   background-size: auto;
@@ -89,8 +87,55 @@ li {
   overflow: hidden;
 }
 
+.HomeBackground {
+  background-image: linear-gradient(to bottom right, #6f88d5, #282c34);
+  background-color: chocolate;
+  flex: auto;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.TodoBackground {
+  background-image: linear-gradient( #6f88d5, #282c34);
+  flex: auto;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.FitBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.NutBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.WellBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: space;
+  overflow: hidden;
+}
+
 @media only screen and (min-width: 300px) {
-  .App {
+  .Todo {
     width: 80%;
   }
 
@@ -106,7 +151,7 @@ li {
 }
 
 @media only screen and (min-width: 640px) {
-  .App {
+  .Todo {
     width: 60%;
   }
 
