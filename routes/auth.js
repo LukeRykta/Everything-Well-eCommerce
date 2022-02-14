@@ -1,10 +1,10 @@
 const express = require('express');
-const router = express.Router();
+const authrouter = express.Router();
 const bcrypt = require('bcrypt');
 
 const Auth = require('../models/User');
 
-router.post("/signup", async (req, res) => {
+authrouter.post("/signup", async (req, res) => {
     const {email} = req.body;
     const testEmail = await Auth.findOne({email});
     if (testEmail) {
@@ -21,7 +21,7 @@ router.post("/signup", async (req, res) => {
     }
 })
 
-router.post("/login", async (req, res) => {
+authrouter.post("/login", async (req, res) => {
     const {email, password} = req.body;
     const user = await Auth.findOne({email});
     if (!user) {
@@ -35,4 +35,4 @@ router.post("/login", async (req, res) => {
     return res.status(200).json(user);
 })
 
-module.exports = router;
+module.exports = authrouter;

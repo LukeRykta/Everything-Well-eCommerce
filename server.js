@@ -26,8 +26,9 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/auth", require("./routes/auth"));
-app.use('/api', require('./routes/todo'));
+app.use("/api", require("./routes/auth"));
+app.use("/api", require("./routes/item"));
+app.use("/api", require("./routes/todo"));
 
 app.use((err, req, res, next) => {
     console.log(err);
