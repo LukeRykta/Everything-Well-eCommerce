@@ -13,7 +13,6 @@ function App () {
   return (
       <BrowserRouter>
           <Routes>
-
               <Route path="/" element={<MainPage />} />
               <Route path="*" element={<NotFoundPage />} />
               <Route path="/todo" element={<ListTest />} />

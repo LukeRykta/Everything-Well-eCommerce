@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const routes = require('./routes/api');
 require('dotenv').config();
 
 const app = express();
@@ -27,7 +26,8 @@ app.use((req, res, next) => {
 app.use(cors());
 app.use(express.json());
 
-app.use('/api', routes);
+app.use("/api/auth", require("./routes/auth"));
+app.use('/api', require('./routes/todo'));
 
 app.use((err, req, res, next) => {
     console.log(err);
