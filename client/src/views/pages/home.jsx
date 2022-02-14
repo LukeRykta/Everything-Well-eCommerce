@@ -11,6 +11,7 @@ const MainPage = () => {
                     <button><Link to="/fitness" className="Home">Fitness</Link></button>
                     <button><Link to="/nutrition" className="Home">Nutrition</Link></button>
                     <button><Link to="/wellness" className="Home">Wellness</Link></button>
+                    <button><Link to="/login" className="Home">Login</Link></button>
             </div>
         </div>
     );

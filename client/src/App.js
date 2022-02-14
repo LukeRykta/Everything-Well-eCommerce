@@ -8,6 +8,7 @@ import FitPage from "./views/pages/fitness";
 import NutPage from "./views/pages/nutrition";
 import WellPage from "./views/pages/wellness";
 import NavBar from "./components/navbar";
+import Login from "./views/pages/login";
 
 function App () {
   return (
@@ -20,6 +21,7 @@ function App () {
               <Route path="/fitness" element={<FitPage />} />
               <Route path="/nutrition" element={<NutPage />} />
               <Route path="/wellness" element={<WellPage />} />
+              <Route path="/login" element={<Login />} />
           </Routes>
       </BrowserRouter>
   );
