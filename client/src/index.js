@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './views/css/Index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /**
  The function below is the root of our React front-end. the render function is constantly refreshing <App/>

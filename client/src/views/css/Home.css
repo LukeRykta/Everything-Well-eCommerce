@@ -89,11 +89,9 @@ li {
 
 .HomeBackground {
   background-image: linear-gradient(to bottom right, #6f88d5, #282c34);
-  background-color: chocolate;
   flex: auto;
   height: 100vh;
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   overflow: hidden;
 }

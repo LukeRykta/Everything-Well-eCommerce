@@ -1,6 +1,5 @@
 const express = require('express');
 const itemrouter = express.Router();
-
 const Item = require('../models/Item');
 
 // GET/allItems
@@ -46,7 +45,6 @@ itemrouter.put("/item/:id", async (req, res) => {
 })
 
 // DELETE/item/id
-
 itemrouter.delete("item/:id", async (req, res) => {
     const { id } = req.params;
     const itemToDelete = await Item.findByIdAndDelete(id)

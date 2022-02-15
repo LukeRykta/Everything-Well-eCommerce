@@ -5,7 +5,6 @@ require('dotenv').config();
 
 const app = express();
 
-
 const port = process.env.PORT || 5000;
 
 // Connect to the database
@@ -27,7 +26,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", require("./routes/auth"));
-app.use("/api/item", require("./routes/item"));
+app.use("/api/items", require("./routes/item"));
+app.use("/api/purchases", require("./routes/purchase"));
 app.use("/api", require("./routes/todo"));
 
 app.use((err, req, res, next) => {

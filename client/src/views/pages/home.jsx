@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const MainPage = () => {
     return(
         <div className="HomeBackground">
-            <div className="Home">
+            <div className="container">
                 <h1>Welcome to the Home Page</h1>
                 <h2>Enjoy Your Stay~</h2>
                     <button><Link to="/todo" className="Home">TO-DO</Link></button>

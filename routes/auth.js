@@ -4,6 +4,15 @@ const bcrypt = require('bcrypt');
 
 const Auth = require('../models/User');
 
+authrouter.get("/", async (req, res) => {
+    const users = await Auth.find();
+    try {
+        return res.status(200).json(users);
+    } catch (error) {
+        return res.status(500).json({message: "Unable to fetch users"});
+    }
+})
+
 authrouter.post("/signup", async (req, res) => {
     const {email} = req.body;
     const testEmail = await Auth.findOne({email});
@@ -31,7 +40,7 @@ authrouter.post("/login", async (req, res) => {
     if (!validPassword) {
         return res.status(500).json({message: "Please check credentials"});
     }
-    //todo possibly generate JSON webtoken
+    //todo possibly generate JSONwebtoken
     return res.status(200).json(user);
 })
 
