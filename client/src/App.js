@@ -9,10 +9,12 @@ import NutPage from "./views/pages/nutrition";
 import WellPage from "./views/pages/wellness";
 import Login from "./views/pages/login";
 import ItemDetails from "./views/pages/itemDetails";
+import NavBar from "./components/NavBar";
 
 function App () {
     return (
         <BrowserRouter>
+            <NavBar/>
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="*" element={<NotFoundPage />} />

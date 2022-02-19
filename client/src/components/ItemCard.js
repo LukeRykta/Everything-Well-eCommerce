@@ -9,7 +9,7 @@ const ItemCard = ({ obj }) => {
             <Card.Body>
                 <Card.Title>{obj.title}</Card.Title>
                 <Card.Text>{obj.vendor}</Card.Text>
-                <Link className="btn btn-outline-primary" to={`/item/${obj._id}`}>
+                <Link className="btn btn-outline-dark" to={`/item/${obj._id}`}>
                     View More
                 </Link>
             </Card.Body>

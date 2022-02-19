@@ -35,7 +35,7 @@ class Input extends Component {
         return (
             <div>
                 <input type="text" onChange={this.handleChange} value={action} />
-                <button onClick={this.addTodo}>add</button>
+                <button className="btn btn-outline-danger mb-2" onClick={this.addTodo}>add</button>
             </div>
         );
     }
