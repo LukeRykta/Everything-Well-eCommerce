@@ -16,7 +16,7 @@ const LogInPage = () => {
                 </label>
                 <div className="col-9">
                     <button type="submit" className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
-                    <Link to="/home" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
+                    <Link to="/" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
                 </div>
             </form>
         </div>

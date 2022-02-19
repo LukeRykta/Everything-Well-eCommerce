@@ -7,7 +7,7 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand>
                     <Link to="/" style={{ textDecoration: 'none', color: "white", margin: 0}}>
-                        Home
+                        Everything Well
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
