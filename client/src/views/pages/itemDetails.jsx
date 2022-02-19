@@ -18,8 +18,9 @@ const ItemDetails = () => {
 
     return (
         <div className="btn col-11">
+            <img src={item.image} />
             <h2>{item.title}</h2>
-            <h3>{item.price}</h3>
+            <h3>${item.price}</h3>
         </div>
 
     )

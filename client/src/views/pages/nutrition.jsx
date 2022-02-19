@@ -3,6 +3,9 @@ import { getAllItems } from "../../services/itemService"
 import ItemCard from "../../components/ItemCard";
 
 const NutPage = () => {
+    const banner = "This is a test page with item cards that can be reused in other pages. " +
+                   "Each card has a btn that redirects to the itemDetails screen which imports " +
+                   "the parameters we use for each unique item.";
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -18,6 +21,7 @@ const NutPage = () => {
 
         <div className="container mt-5">
             <h2>Nutrition Page</h2>
+            <p className="blockquote">{banner}</p>
             <div className="container">
                 <div className="row">
                     {items.map((item) => (
