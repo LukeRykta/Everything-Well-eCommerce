@@ -25,6 +25,9 @@ git clone https://github.com/LukeRykta/SoftwareDesign
 ### Install npm packages
 While in the git directory (eg school/class/SoftwareDesign), run the following commands.
 ```bash
+#Verify npm version is 8.0+. If not, update
+npm --version
+
 #Install express, mongoose, and dotenv
 npm install express
 npm install mongoose
