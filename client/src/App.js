@@ -10,6 +10,7 @@ import WellPage from "./views/pages/wellness";
 import Login from "./views/pages/login";
 import ItemDetails from "./views/pages/itemDetails";
 import NavBar from "./components/NavBar";
+import AddItem from "./views/pages/addItem";
 
 function App () {
     return (
@@ -25,6 +26,7 @@ function App () {
                 <Route path="/nutrition" element={<NutPage />} />
                 <Route path="/itemDetails" element={<ItemDetails />} />
                 <Route path="/item/:id" element={<ItemDetails/>} />
+                <Route path="/addItem" element={<AddItem/>} />
             </Routes>
         </BrowserRouter>
     );

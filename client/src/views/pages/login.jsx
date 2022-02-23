@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const LogInPage = () => {
+const LoginPage = () => {
     return(
         <div className="container col-11, mt-5 ">
             <h1>Please Log In</h1>
@@ -22,5 +22,5 @@ const LogInPage = () => {
         </div>
     )
 }
-export default LogInPage;
+export default LoginPage;
 

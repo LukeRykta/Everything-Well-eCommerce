@@ -18,8 +18,8 @@ const NavBar = () => {
                     </Nav>
                     <Nav>
                         <Nav.Link href="/login">Login</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
+                        <Nav.Link eventKey={2} href="/addItem">
+                            Create
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
