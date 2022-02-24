@@ -15,31 +15,33 @@ const LoginPage = () => {
         <div className="text-center container col-11, mt-5 ">
             <form className="form mt-5">
                 <h2>Please Log In</h2>
-                    <label className="col-11">
-                        <input
-                            type="text"
-                            placeholder="username"
-                            className="form-control"
-                        />
-                        </label>
-                        <label className="col-10">
+                    <Row>
+                        <label>
                             <input
-                                type={isRevealPwd ? "text" : "password"}
-                                placeholder="password"
+                                type="text"
+                                placeholder="username"
                                 className="form-control"
-                                value={pwd}
-                                onChange={e => setPwd(e.target.value)}
-                            />
-                            <img
-                                title={isRevealPwd ? "Hide password" : "Show password"}
-                                src={isRevealPwd ? showPwdImg : hidePwdImg}
-                                onClick={() => setIsRevealPwd(prevState => !prevState)}
                             />
                         </label>
-                        <div >
-                            <button type="submit" className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
-                            <Link to="/" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
-                        </div>
+                            <label>
+                                <input
+                                    type={isRevealPwd ? "text" : "password"}
+                                    placeholder="password"
+                                    className="form-control"
+                                    value={pwd}
+                                    onChange={e => setPwd(e.target.value)}
+                                />
+                                <img
+                                    title={isRevealPwd ? "Hide password" : "Show password"}
+                                    src={isRevealPwd ? showPwdImg : hidePwdImg}
+                                    onClick={() => setIsRevealPwd(prevState => !prevState)}
+                                />
+                            </label>
+                            <div >
+                                <button type="submit" className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
+                                <Link to="/" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
+                            </div>
+                        </Row>
             </form>
         </div>
     )
