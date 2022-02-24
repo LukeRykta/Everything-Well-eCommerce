@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import {useState} from "react";
 import showPwdImg from '../assets/show-password.png';
 import hidePwdImg from '../assets/hide-password.png';
+import {Row} from "react-bootstrap";
+import "../css/Form.css"
 
 
 const LoginPage = () => {
@@ -10,33 +12,85 @@ const LoginPage = () => {
     const [isRevealPwd, setIsRevealPwd] = useState(false);
 
     return(
-        <div className="container col-11, mt-5 ">
-            <h1>Please Log In</h1>
-            <form className="mt-5">
-                <label className="col-11">
-                    <p>Username</p>
-                    <input type="text"/>
-                </label>
-                <label className="col-10">
-                    <p className="mt-3">Password</p>
-                    <input
-                        type={isRevealPwd ? "text" : "password"}
-                        value={pwd}
-                        onChange={e => setPwd(e.target.value)}
-                    />
-                    <img
-                        title={isRevealPwd ? "Hide password" : "Show password"}
-                        src={isRevealPwd ? hidePwdImg : showPwdImg}
-                        onClick={() => setIsRevealPwd(prevState => !prevState)}
-                    />
-                </label>
-                <div className="col-9">
-                    <button type="submit" className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
-                    <Link to="/" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
-                </div>
+        <div className="text-center container col-11, mt-5 ">
+            <form className="form mt-5">
+                <h2>Please Log In</h2>
+                    <label className="col-11">
+                        <input
+                            type="text"
+                            placeholder="username"
+                            className="form-control"
+                        />
+                        </label>
+                        <label className="col-10">
+                            <input
+                                type={isRevealPwd ? "text" : "password"}
+                                placeholder="password"
+                                className="form-control"
+                                value={pwd}
+                                onChange={e => setPwd(e.target.value)}
+                            />
+                            <img
+                                title={isRevealPwd ? "Hide password" : "Show password"}
+                                src={isRevealPwd ? showPwdImg : hidePwdImg}
+                                onClick={() => setIsRevealPwd(prevState => !prevState)}
+                            />
+                        </label>
+                        <div >
+                            <button type="submit" className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
+                            <Link to="/" style={{ textDecoration: 'none' }}><button className="btn btn-outline-secondary mt-4">Return</button></Link>
+                        </div>
             </form>
         </div>
     )
 }
 export default LoginPage;
 
+/*
+
+         <div className="container mt-5">
+            <form className="form">
+                <h2 className="text-center">Create New Item</h2>
+                <Row>
+                    <input
+                        name="title"
+                        onChange={handleChange}
+                        value={item.title}
+                        className="form-control"
+                        placeholder="title"
+                        type="text"
+                    />
+                    <input
+                        name="vendor"
+                        onChange={handleChange}
+                        value={item.vendor}
+                        className="form-control"
+                        placeholder="vendor"
+                        type="text"
+                    />
+                    <input
+                        name="image"
+                        onChange={handleChange}
+                        value={item.image}
+                        className="form-control"
+                        placeholder="image (url)"
+                        type="text"
+                    />
+                    <input
+                        name="price"
+                        onChange={handleChange}
+                        value={item.price}
+                        className="form-control"
+                        placeholder="price"
+                        type="text"
+                    />
+                    <button
+                        onClick={handleSubmit}
+                        className="btn btn-outline-success mt-3">
+                        Create
+                    </button>
+                </Row>
+            </form>
+        </div>
+
+ */
