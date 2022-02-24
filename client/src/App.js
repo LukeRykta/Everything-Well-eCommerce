@@ -11,6 +11,7 @@ import Login from "./views/pages/login";
 import ItemDetails from "./views/pages/itemDetails";
 import NavBar from "./components/NavBar";
 import AddItem from "./views/pages/addItem";
+import Register from "./views/pages/register";
 
 function App () {
     return (
@@ -25,8 +26,9 @@ function App () {
                 <Route path="/wellness" element={<WellPage />} />
                 <Route path="/nutrition" element={<NutPage />} />
                 <Route path="/itemDetails" element={<ItemDetails />} />
-                <Route path="/item/:id" element={<ItemDetails/>} />
-                <Route path="/addItem" element={<AddItem/>} />
+                <Route path="/item/:id" element={<ItemDetails />} />
+                <Route path="/addItem" element={<AddItem />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </BrowserRouter>
     );
