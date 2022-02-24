@@ -8,7 +8,7 @@
 
 .Home {
   text-align: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(25px + 2vmin);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -44,11 +44,11 @@ input:focus {
 
 button {
   width: 25%;
-  height: 45px;
+  height: 65px;
   border: none;
   margin-left: 10px;
   font-size: 25px;
-  background: #101113;
+  background: beige;
   border-radius: 10px;
   color: #6f88d5;
   cursor: pointer;
@@ -95,7 +95,15 @@ li {
   background-position: center;
   overflow: hidden;
 }
-
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 .TodoBackground {
   background-image: linear-gradient( #6f88d5, #282c34);
   flex: auto;
