@@ -7,19 +7,21 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand>
                     <Link to="/" style={{ textDecoration: 'none', color: "white", margin: 0}}>
-                        Home
+                        Everything Well
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Features</Nav.Link>
-                        <Nav.Link href="#pricing">Pricing</Nav.Link>
+                        <Nav.Link href="/addItem">Create</Nav.Link>
+                        <Nav.Link href="#deleteItem">Destroy</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login">Login</Nav.Link>
-                        <Nav.Link eventKey={2} href="#memes">
-                            Dank memes
+                        <Nav.Link href="/login">
+                            Login
+                        </Nav.Link>
+                        <Nav.Link eventKey={2} href="/register">
+                            Register
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>

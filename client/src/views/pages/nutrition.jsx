@@ -18,7 +18,6 @@ const NutPage = () => {
     }
 
     return(
-
         <div className="container mt-5">
             <h2>Nutrition Page</h2>
             <p className="blockquote">{banner}</p>
