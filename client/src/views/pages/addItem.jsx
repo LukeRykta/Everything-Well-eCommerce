@@ -6,7 +6,6 @@ import {useNavigate} from "react-router-dom";
 import {createItem} from "../../services/itemService";
 
 const AddItem = () => {
-    const apiUrl = process.env.REACT_APP_API_URL;
     const [item, setItem] = useState({
         title: "",
         vendor: "",
@@ -39,7 +38,7 @@ const AddItem = () => {
                         onChange={handleChange}
                         value={item.title}
                         className="form-control mt-4"
-                        placeholder="title"
+                        placeholder="item name"
                         type="text"
                     />
                     <input

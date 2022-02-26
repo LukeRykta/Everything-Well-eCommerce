@@ -1,7 +1,11 @@
-import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Button, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./NavBar.css"
+import {isAuthenticated, logOut} from "../services/authService";
 
 const NavBar = () => {
+    const user = isAuthenticated();
+
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
@@ -17,12 +21,19 @@ const NavBar = () => {
                         <Nav.Link href="#deleteItem">Destroy</Nav.Link>
                     </Nav>
                     <Nav>
-                        <Nav.Link href="/login">
-                            Login
-                        </Nav.Link>
-                        <Nav.Link eventKey={2} href="/register">
-                            Register
-                        </Nav.Link>
+                        {user ? (
+                            <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
+                        ) : (
+                            <>
+                                <Nav.Link href="/login">
+                                    Login
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/register">
+                                    Register
+                                </Nav.Link>
+                            </>
+                            )
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>

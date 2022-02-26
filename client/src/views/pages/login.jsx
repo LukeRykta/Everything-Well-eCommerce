@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import showPwdImg from '../assets/show-password.png';
 import hidePwdImg from '../assets/hide-password.png';
@@ -12,6 +12,8 @@ const LoginPage = () => {
         email: '',
         password: ''
     })
+
+    const navigate = useNavigate();
 
     // todo two onChange events in same input? 2/23: const [pwd, setPwd] = useState('');
     const [isRevealPwd, setIsRevealPwd] = useState(false);
@@ -31,6 +33,7 @@ const LoginPage = () => {
             email: '',
             password: '',
         });
+        navigate('/')
     }
 
     return(
