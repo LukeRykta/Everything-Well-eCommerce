@@ -34,6 +34,7 @@ const LoginPage = () => {
             password: '',
         });
         navigate('/')
+        window.location.reload()
     }
 
     return(

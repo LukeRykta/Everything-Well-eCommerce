@@ -26,6 +26,7 @@ const AddItem = () => {
         console.log(item);
         const response = await createItem(item);
         navigate('/nutrition')
+        window.location.reload();
     }
 
     return (
