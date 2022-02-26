@@ -23,7 +23,7 @@ const ItemDetails = () => {
             <h2>{item.title}</h2>
             <h3>${item.price}</h3>
             <div className="mt-5">
-                <img style={{height:400}} src={item.image} alt="empty" />
+                <img style={{height:400}} src={item.image} alt="" />
             </div>
                 <div className="mt-4">
                     <button className="btn btn-outline-success w-auto">add to cart</button>

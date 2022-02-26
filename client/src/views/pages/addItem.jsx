@@ -3,9 +3,9 @@ import '../css/Form.css'
 import {useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {createItem} from "../../services/itemService";
 
 const AddItem = () => {
-    const apiUrl = process.env.REACT_APP_API_URL;
     const [item, setItem] = useState({
         title: "",
         vendor: "",
@@ -24,7 +24,7 @@ const AddItem = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(item);
-        const response = await axios.post(`${apiUrl}/items/item`, item);
+        const response = await createItem(item);
         navigate('/nutrition')
     }
 
@@ -37,8 +37,8 @@ const AddItem = () => {
                         name="title"
                         onChange={handleChange}
                         value={item.title}
-                        className="form-control"
-                        placeholder="title"
+                        className="form-control mt-4"
+                        placeholder="item name"
                         type="text"
                     />
                     <input
@@ -67,7 +67,7 @@ const AddItem = () => {
                     />
                     <button
                         onClick={handleSubmit}
-                        className="btn btn-outline-success mt-3">
+                        className="btn btn-outline-success mt-4">
                         Create
                     </button>
                 </Row>

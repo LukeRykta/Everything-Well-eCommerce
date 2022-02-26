@@ -12,6 +12,7 @@ import ItemDetails from "./views/pages/itemDetails";
 import NavBar from "./components/NavBar";
 import AddItem from "./views/pages/addItem";
 import Register from "./views/pages/register";
+import AuthRoute from "./components/AuthRoute";
 
 function App () {
     return (
@@ -19,6 +20,9 @@ function App () {
             <NavBar/>
             <Routes>
                 <Route path="/" element={<MainPage />} />
+                <Route element={<AuthRoute/>}>
+                    <Route path="/addItem" element={<AddItem />} />
+                </Route>
                 <Route path="*" element={<NotFoundPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/todo" element={<ListTest />} />
