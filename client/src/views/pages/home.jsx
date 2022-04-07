@@ -5,11 +5,15 @@ import {isAuthenticated} from "../../services/authService";
 
 const MainPage = () => {
     const user = isAuthenticated();
+    let name = user.name;
+    if (name==null){
+        name = "guest";
+    }
 
     return(
         <div className="container mt-5 FitBackground text-center">
             <div className="text-center">
-                <h1>Welcome to the Home Page {user.name}</h1>
+                <h1>Welcome to the Home Page, {name}</h1>
                 <div className="container">
                     <Row className="mt-5 ">
                         <Link to="/todo" style={{ textDecoration: 'none'}}>
