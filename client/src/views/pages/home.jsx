@@ -7,7 +7,7 @@ const MainPage = () => {
     const user = isAuthenticated();
     let name = user.name;
     if (name==null){
-        name = "guest";
+        name = "Guest";
     }
 
     return(

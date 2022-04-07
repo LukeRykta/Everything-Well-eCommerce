@@ -2,6 +2,7 @@ import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
 import {isAuthenticated, logOut} from "../services/authService";
+import cartImage from "../views/assets/icons8-buying-30.png";
 
 const NavBar = () => {
     const user = isAuthenticated();
@@ -33,7 +34,7 @@ const NavBar = () => {
                         ) : (
                             <>
                                 <Nav.Link href="/cart">
-                                    Cart
+                                    <img src={cartImage} alt="Cart Image"/>
                                 </Nav.Link>
                                 <Nav.Link href="/login">
                                     Login

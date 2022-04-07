@@ -30,7 +30,7 @@ const LoginPage = () => {
         event.preventDefault();
         const response = await loginUser(user);
         if(!response){
-           console.log('faile');
+           console.log('failed');
            window.location.reload();
         }
         else {
@@ -73,6 +73,7 @@ const LoginPage = () => {
                         <img
                             title={isRevealPwd ? "Hide password" : "Show password"}
                             src={isRevealPwd ? showPwdImg : hidePwdImg}
+                            alt="EyeIcon"
                             onClick={() => setIsRevealPwd(prevState => !prevState)}
                         />
                     </label>
