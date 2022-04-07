@@ -5,6 +5,7 @@ import {isAuthenticated, logOut} from "../services/authService";
 
 const NavBar = () => {
     const user = isAuthenticated();
+    console.log("HERE",user.role === 'ADMIN');
 
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -17,12 +18,16 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="/addItem">Create</Nav.Link>
+                        { user && user.role === 'ADMIN' && (
+                            <Nav.Link href="/addItem">Create</Nav.Link>
+                        )}
                         <Nav.Link href="#deleteItem">Destroy</Nav.Link>
                     </Nav>
                     <Nav>
                         {user ? (
-                            <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
+                            <>
+                                <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
+                            </>
                         ) : (
                             <>
                                 <Nav.Link href="/login">

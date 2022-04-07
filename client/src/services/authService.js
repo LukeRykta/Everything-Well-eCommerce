@@ -18,13 +18,17 @@ export const registerUser = async (userObject) => {
 
 export const isAuthenticated = () => {
     // checks to see if login attempt is coming from browser window
-    if (typeof window == 'undefined') {
+    if (typeof window == 'undefined')
         return false;
-    }
-    const user = JSON.parse(localStorage.getItem(jwtString));
-    if (user) {
+
+    if (!localStorage.getItem(jwtString))
+        return false;
+
+    const {user} = JSON.parse(localStorage.getItem(jwtString));
+
+    if (user)
         return user;
-    }
+
     return false;
 }
 
