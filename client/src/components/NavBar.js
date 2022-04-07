@@ -18,10 +18,12 @@ const NavBar = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        { user && user.role === 'ADMIN' && (
+                        { user.role === 'ADMIN' && (
                             <Nav.Link href="/addItem">Create</Nav.Link>
                         )}
-                        <Nav.Link href="#deleteItem">Destroy</Nav.Link>
+                        { user.role === 'ADMIN' && (
+                            <Nav.Link href="#deleteItem">Delete</Nav.Link>
+                        )}
                     </Nav>
                     <Nav>
                         {user ? (
