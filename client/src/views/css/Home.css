@@ -1,0 +1,173 @@
+.Todo {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Home {
+  text-align: center;
+  font-size: calc(25px + 2vmin);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+.Page {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(143, 155, 210, 0.79);
+}
+
+input {
+  height: 40px;
+  width: 50%;
+  border: none;
+  border-bottom: 2px rgba(0, 0, 0, 0.63) solid;
+  background: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.link {
+  color: #8b9f97;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 25%;
+  height: 65px;
+  border: none;
+  margin-left: 10px;
+  font-size: 25px;
+  background: beige;
+  border-radius: 10px;
+  color: #6f88d5;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: white;
+}
+
+ul {
+  list-style: inherit;
+  text-align: left;
+  padding: 15px;
+  background: #171a1f;
+  border-radius: 15px;
+  color: #6f88d5;
+}
+
+li {
+  padding: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  background: #282c34;
+  border-radius: 5px;
+  overflow-wrap: break-word;
+  cursor: pointer;
+}
+
+.NotFoundBackground{
+  background-image: url("../assets/dc.png");
+  flex: auto;
+  height: 100vh;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.HomeBackground {
+  background-image: linear-gradient(to bottom right, #6f88d5, #282c34);
+  flex: auto;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.TodoBackground {
+  background-image: linear-gradient( #6f88d5, #282c34);
+  flex: auto;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.FitBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.NutBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 50vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.WellBackground {
+  background-image: url("../assets/fitness.png");
+  flex: auto;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: space;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 300px) {
+  .Todo {
+    width: 80%;
+  }
+
+  input {
+    width: 100%
+  }
+
+  button {
+    width: 100%;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .Todo {
+    width: 60%;
+  }
+
+  input {
+    width: 50%;
+  }
+
+  button {
+    width: 30%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+}
