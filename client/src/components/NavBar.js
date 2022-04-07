@@ -1,4 +1,4 @@
-import {Button, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
 import {isAuthenticated, logOut} from "../services/authService";
