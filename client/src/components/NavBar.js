@@ -32,6 +32,9 @@ const NavBar = () => {
                             </>
                         ) : (
                             <>
+                                <Nav.Link href="/cart">
+                                    Cart
+                                </Nav.Link>
                                 <Nav.Link href="/login">
                                     Login
                                 </Nav.Link>

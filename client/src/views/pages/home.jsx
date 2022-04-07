@@ -15,7 +15,7 @@ const MainPage = () => {
             <div className="text-center">
                 <h1>Welcome to the Home Page, {name}</h1>
                 <div className="container">
-                    <Row className="mt-5 ">
+                    <Row className="mt-6 ">
                         <Link to="/todo" style={{ textDecoration: 'none'}}>
                             <button className="btn btn-outline-dark my-1">To-Do</button>
                         </Link>

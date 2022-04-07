@@ -8,6 +8,7 @@ import "../css/Form.css"
 import {loginUser} from "../../services/authService";
 
 const LoginPage = () => {
+
     const [user, setUser] = useState({
         email: '',
         password: ''
@@ -28,13 +29,19 @@ const LoginPage = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         const response = await loginUser(user);
-        console.log(response.data);
-        setUser({
-            email: '',
-            password: '',
-        });
-        navigate('/')
-        window.location.reload()
+        if(!response){
+           console.log('faile');
+           window.location.reload();
+        }
+        else {
+            console.log(response.data);
+            setUser({
+                email: '',
+                password: '',
+            });
+            navigate('/')
+            window.location.reload();
+        }
     }
 
     return(
