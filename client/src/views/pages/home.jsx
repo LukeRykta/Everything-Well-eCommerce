@@ -12,9 +12,9 @@ const MainPage = () => {
 
     return(
         <div className="FitBackground">
-            <div className="mt-5 text-center h1 itemCard container" style={{background: "#66d37e", width: window.innerWidth/2, height: window.innerHeight/2}}>
+            <div className="mt-5 text-center h1 itemCard container" style={{background: "#66d37e", width: window.innerWidth/2, height: window.innerHeight/1.75}}>
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
-                <Row className="mt-5">
+                <Row className="mt-4">
                     <div>
                         <Link to="/todo" style={{ textDecoration: 'none'}}>
                             <button className="btn btn-outline-dark my-1">To-Do</button>
