@@ -12,7 +12,7 @@ const MainPage = () => {
 
     return(
         <div className="TestBackground">
-            <div className="mt-5 text-center h1 itemCard container" style={{background: "#66d37e", width: window.innerWidth/2, height: window.innerHeight/2}}>
+            <div className="mt-5 text-center h1 itemCard container-fluid w-25" >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
                 <Row className="mt-4">
                     <div>
@@ -30,7 +30,7 @@ const MainPage = () => {
                             <button className="btn btn-outline-dark my-1">Nutrition</button>
                         </Link>
                     </div>
-                    <div>
+                    <div className="mb-5">
                         <Link to="/wellness" style={{ textDecoration: 'none' }}>
                             <button className="btn btn-outline-dark my-1">Wellness</button>
                         </Link>
