@@ -19,23 +19,27 @@ const ItemDetails = () => {
     }
 
     return (
-        <div className="text-center col-11 mt-5">
-            <h2>{item.title}</h2>
-            <h3>${item.price}</h3>
-            <div className="mt-5">
-                <img style={{height:400}} src={item.image} alt="" />
-            </div>
-            <form className="form mt-5 p-4">
-                <button className="btn btn-outline-success mx-1 my-1">add to cart</button>
-                { user.role === 'ADMIN' &&(
-                    <Link to={`/editItem/$item._id}`} style={{ textDecoration: 'none' }}>
-                        <button className="btn btn-outline-danger mx-1 my-1">edit</button>
+        <div className="form container mt-3">
+            <div className="text-center">
+                <div className="card-header" style={{borderRadius: "10px"}}>
+                    <h1>{item.title}</h1>
+                    <h3>${item.price}</h3>
+                </div>
+                <div className="mt-5 container">
+                    <img style={{width: "75%"}} src={item.image} alt="image not found :/" />
+                </div>
+                <div className="card-img-bottom mt-5 ">
+                    <button className="btn btn-outline-success mx-1 my-1">Add to Cart</button>
+                    { user.role === 'ADMIN' &&(
+                        <Link to={`/editItem/${item._id}`} style={{ textDecoration: 'none' }}>
+                            <button className="btn btn-outline-danger mx-1 my-1">Edit</button>
+                        </Link>
+                    )}
+                    <Link to="/nutrition" style={{ textDecoration: 'none' }}>
+                        <button className="btn btn-outline-secondary mx-1 my-1">Return</button>
                     </Link>
-                )}
-                <Link to="/nutrition" style={{ textDecoration: 'none' }}>
-                    <button className="btn btn-outline-secondary mx-1 my-1">Return</button>
-                </Link>
-            </form>
+                </div>
+            </div>
         </div>
     )
 }

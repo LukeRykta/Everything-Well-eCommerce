@@ -77,13 +77,12 @@ li {
   cursor: pointer;
 }
 
-.NotFoundBackground{
-  background-image: url("../assets/dc.png");
+.RepeatingBackground{
+  background-image: url("../assets/repeating.jpg");
   flex: auto;
-  height: 100vh;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+
+  background-repeat: repeat;
+  background-position: revert;
   overflow: hidden;
 }
 
@@ -106,7 +105,7 @@ li {
 }
 
 .FitBackground {
-  background-image: linear-gradient(#c6e872, #083836);
+  background-image: linear-gradient(#66d37e, #083836);
   background-attachment: fixed;
   min-height: 100vh;
   flex: auto;
@@ -115,8 +114,12 @@ li {
   overflow: hidden;
 }
 
+.FitBackground {
+
+}
+
 h1 {
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.63);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.63);
 }
 
 .TodoBackground {

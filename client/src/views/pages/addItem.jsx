@@ -29,8 +29,9 @@ const AddItem = () => {
             title: '',
             author: '',
             image: '',
-            genre: '',
-        })
+            price: '',
+        });
+        window.location.reload()
     }
 
     return (

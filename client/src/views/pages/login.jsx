@@ -31,7 +31,11 @@ const LoginPage = () => {
         const response = await loginUser(user);
         if(!response){
            console.log('failed');
-           window.location.reload();
+            setUser({
+                email: '',
+                password: '',
+            });
+            window.location.reload();
         }
         else {
             console.log(response.data);
