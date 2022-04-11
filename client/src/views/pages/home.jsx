@@ -12,7 +12,7 @@ const MainPage = () => {
 
     return(
         <div className="TestBackground">
-            <div className="mt-5 text-center h1 itemCard container-fluid w-25" >
+            <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "50%"}} >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
                 <Row className="mt-4">
                     <div>
