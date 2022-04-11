@@ -49,45 +49,47 @@ const LoginPage = () => {
     }
 
     return(
-        <div className="text-center mt-5" style={{height: "100%", width: "100%", display: "flex", margin: "auto"}}>
-            <form onSubmit={handleSubmit} className="form">
-                <h2>Sign In</h2>
-                <Row>
-                    <label>
-                        <input
-                            className="form-control mt-4"
-                            onChange={handleChange}
-                            name="email"
-                            value={user.email}
-                            type="text"
-                            placeholder="email"
-                        />
-                    </label>
-                    <label>
-                        <div className="input-group">
-                            <input style={{zIndex: 0}}
-                                className="form-control"
+        <div className="FitBackground">
+            <div className="text-center mt-5" style={{height: "100%", width: "100%", display: "flex", margin: "auto"}}>
+                <form onSubmit={handleSubmit} className="form bg-light shadow-lg border-3">
+                    <h2 className="card-title">Sign In</h2>
+                    <Row>
+                        <label>
+                            <input
+                                className="form-control mt-4"
                                 onChange={handleChange}
-                                name="password"
-                                value={user.password}
-                                type={isRevealPwd ? "text" : "password"}
-                                placeholder="password"
+                                name="email"
+                                value={user.email}
+                                type="text"
+                                placeholder="email"
                             />
-                            <img style={{position: "absolute", right: 15, marginTop: 15}}
-                                title={isRevealPwd ? "Hide password" : "Show password"}
-                                src={isRevealPwd ? showPwdImg : hidePwdImg}
-                                alt="EyeIcon"
-                                onClick={() => setIsRevealPwd(prevState => !prevState)}
-                            />
+                        </label>
+                        <label>
+                            <div className="input-group">
+                                <input style={{zIndex: 0}}
+                                    className="form-control"
+                                    onChange={handleChange}
+                                    name="password"
+                                    value={user.password}
+                                    type={isRevealPwd ? "text" : "password"}
+                                    placeholder="password"
+                                />
+                                <img style={{position: "absolute", right: 15, marginTop: 15}}
+                                    title={isRevealPwd ? "Hide password" : "Show password"}
+                                    src={isRevealPwd ? showPwdImg : hidePwdImg}
+                                    alt="EyeIcon"
+                                    onClick={() => setIsRevealPwd(prevState => !prevState)}
+                                />
+                            </div>
+                        </label>
+                        <div >
+                            <button style={{height:40}} className="btn btn-success mt-4 mx-2">Submit</button>
+                            <Link to="/" style={{ textDecoration: 'none' }}><button style={{height:40}} className="btn btn-secondary mt-4">Return</button></Link>
                         </div>
-                    </label>
-                    <div >
-                        <button style={{height:40}} className="btn btn-outline-secondary btn-outline-success mt-4 mx-2">Submit</button>
-                        <Link to="/" style={{ textDecoration: 'none' }}><button style={{height:40}} className="btn btn-outline-secondary mt-4">Return</button></Link>
-                    </div>
-                    <Link to="/register"><p className="mt-3 my-auto">Don't have an account?</p></Link>
-                </Row>
-            </form>
+                        <Link to="/register"><p className="mt-3 my-auto">Don't have an account?</p></Link>
+                    </Row>
+                </form>
+            </div>
         </div>
     )
 }

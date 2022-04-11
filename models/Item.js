@@ -17,6 +17,9 @@ const ItemSchema = Schema (
         },
         price: {
             type: Number
+        },
+        quantity: {
+            type: Number
         }
     }
 )
