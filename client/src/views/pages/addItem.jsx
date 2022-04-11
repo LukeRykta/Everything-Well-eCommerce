@@ -1,18 +1,17 @@
 import {Row} from "react-bootstrap";
 import '../css/Form.css'
 import {useState} from "react";
-import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import {createItem} from "../../services/itemService";
 
 const AddItem = () => {
+    const navigate = useNavigate();
     const [item, setItem] = useState({
         title: "",
         vendor: "",
         image: "",
         price: ""
     });
-    const navigate = useNavigate();
 
     const handleChange = (event) => {
         setItem({
@@ -24,9 +23,14 @@ const AddItem = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(item);
-        const response = await createItem(item);
+        await createItem(item);
         navigate('/nutrition')
-        window.location.reload();
+        setItem({
+            title: '',
+            author: '',
+            image: '',
+            genre: '',
+        })
     }
 
     return (

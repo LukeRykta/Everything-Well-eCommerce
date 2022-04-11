@@ -24,7 +24,7 @@ const Register = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const response = await registerUser(user);
+        await registerUser(user);
         setUser({
             name: '',
             email: '',
@@ -59,24 +59,26 @@ const Register = () => {
                         />
                     </label>
                     <label>
-                        <input
-                            className="form-control"
-                            onChange={handleChange}
-                            name="password"
-                            value={user.password}
-                            type={isRevealPwd ? "text" : "password"}
-                            placeholder="password"
-                            // todo see above value={pwd}
-                            // todo see above onChange={e => setPwd(e.target.value)}
-                        />
-                        <img
-                            title={isRevealPwd ? "Hide password" : "Show password"}
-                            src={isRevealPwd ? showPwdImg : hidePwdImg}
-                            onClick={() => setIsRevealPwd(prevState => !prevState)}
-                        />
+                        <div className="input-group">
+                            <input style={{zIndex: 0}}
+                                className="form-control"
+                                onChange={handleChange}
+                                name="password"
+                                value={user.password}
+                                type={isRevealPwd ? "text" : "password"}
+                                placeholder="password"
+                                // todo see above value={pwd}
+                                // todo see above onChange={e => setPwd(e.target.value)}
+                            />
+                            <img style={{position: "absolute", right: 15, marginTop: 15}}
+                                title={isRevealPwd ? "Hide password" : "Show password"}
+                                src={isRevealPwd ? showPwdImg : hidePwdImg}
+                                onClick={() => setIsRevealPwd(prevState => !prevState)}
+                            />
+                        </div>
                     </label>
                     <div >
-                        <button style={{height:40}} className="btn btn-outline-secondary btn-outline-success mt-4">
+                        <button style={{height:40}} className="btn btn-outline-secondary btn-outline-success mt-4 mx-2">
                             Create
                         </button>
                         <Link to="/" style={{ textDecoration: 'none' }}>
@@ -84,7 +86,7 @@ const Register = () => {
                                 Return
                             </button>
                         </Link>
-                        <Link to="/login"><p className="mt-3">Already have an account?</p></Link>
+                        <Link to="/login"><p className="mt-3 mb-auto">Already have an account?</p></Link>
                     </div>
                 </Row>
             </form>

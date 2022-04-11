@@ -45,9 +45,9 @@ const LoginPage = () => {
     }
 
     return(
-        <div className="text-center container col-11, mt-5 ">
-            <form onSubmit={handleSubmit} className="form mt-5">
-                <h2>Please Log In</h2>
+        <div className="text-center mt-5" style={{height: "100%", width: "100%", display: "flex", margin: "auto"}}>
+            <form onSubmit={handleSubmit} className="form">
+                <h2>Sign In</h2>
                 <Row>
                     <label>
                         <input
@@ -60,28 +60,28 @@ const LoginPage = () => {
                         />
                     </label>
                     <label>
-                        <input
-                            className="form-control"
-                            onChange={handleChange}
-                            name="password"
-                            value={user.password}
-                            type={isRevealPwd ? "text" : "password"}
-                            placeholder="password"
-                            // todo see above value={pwd}
-                            // todo see above onChange={e => setPwd(e.target.value)}
-                        />
-                        <img
-                            title={isRevealPwd ? "Hide password" : "Show password"}
-                            src={isRevealPwd ? showPwdImg : hidePwdImg}
-                            alt="EyeIcon"
-                            onClick={() => setIsRevealPwd(prevState => !prevState)}
-                        />
+                        <div className="input-group">
+                            <input style={{zIndex: 0}}
+                                className="form-control"
+                                onChange={handleChange}
+                                name="password"
+                                value={user.password}
+                                type={isRevealPwd ? "text" : "password"}
+                                placeholder="password"
+                            />
+                            <img style={{position: "absolute", right: 15, marginTop: 15}}
+                                title={isRevealPwd ? "Hide password" : "Show password"}
+                                src={isRevealPwd ? showPwdImg : hidePwdImg}
+                                alt="EyeIcon"
+                                onClick={() => setIsRevealPwd(prevState => !prevState)}
+                            />
+                        </div>
                     </label>
                     <div >
-                        <button style={{height:40}} className="btn btn-outline-secondary btn-outline-success mt-4">Submit</button>
+                        <button style={{height:40}} className="btn btn-outline-secondary btn-outline-success mt-4 mx-2">Submit</button>
                         <Link to="/" style={{ textDecoration: 'none' }}><button style={{height:40}} className="btn btn-outline-secondary mt-4">Return</button></Link>
                     </div>
-                    <Link to="/register"><p className="mt-3">Don't have an account?</p></Link>
+                    <Link to="/register"><p className="mt-3 my-auto">Don't have an account?</p></Link>
                 </Row>
             </form>
         </div>

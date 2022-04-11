@@ -29,13 +29,15 @@ const NavBar = () => {
                     <Nav>
                         {user ? (
                             <>
+                                { user.role === 'USER' && (
+                                    <Nav.Link href="/cart" className="mx-2">
+                                        <img style={{width: "1.4rem", height: "1.4rem"}} src={cartImage} alt="Cart Image"/>
+                                    </Nav.Link>
+                                )}
                                 <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
                             </>
                         ) : (
                             <>
-                                <Nav.Link href="/cart">
-                                    <img src={cartImage} alt="Cart Image"/>
-                                </Nav.Link>
                                 <Nav.Link href="/login">
                                     Login
                                 </Nav.Link>
