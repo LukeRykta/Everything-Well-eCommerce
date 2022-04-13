@@ -29,7 +29,7 @@ button:focus {
 
 ul {
     list-style: inherit;
-    text-align: left;
+    text-align: center;
     padding: 15px;
     background: #171a1f;
     border-radius: 15px;
@@ -44,6 +44,7 @@ li {
     border-radius: 5px;
     overflow-wrap: break-word;
     cursor: pointer;
+    text-align: center;
 }
 
 .FitBackground {

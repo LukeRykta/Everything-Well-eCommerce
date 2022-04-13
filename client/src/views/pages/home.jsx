@@ -38,29 +38,50 @@ const MainPage = () => {
                 
         </div>
           
-        <div 
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            }} className="TrackListing">
+        <div className="TrackListing">
             <br />
-            <div className="TracksHeading">
+           
+            <ul>
+                <li>
+                <div className="container-fluid TracksHeading">
                 Tracks
             </div>
+
+                </li>
+                <li>
+                <div className="container-fluid SubTracksHeading">Click on a track to get started on your journey</div>
+                </li>
+            
+
+            </ul>
+            
            
-            <div className="TrackIcons">
+           
+            
             <span>
             <br />
-            <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
+            <ul>
+                <li>
+                <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
 
-            <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
+                <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
 
-            <a href='/fitness'><img src={require("../../views/assets/fitness2.png")} /></a>
+                <a href='/fitness'><img src={require("../../views/assets/fitness2.png")} /></a>
+
+                </li>
+                <li>
+                   <div className="TrackDescriptions">Nutrition</div>
+                </li>
+               
+                
+
+            </ul>
+
+            
 
             </span>
 
-            </div>
+            
             
     
         </div>

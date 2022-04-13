@@ -64,25 +64,21 @@ button {
 
 button:focus {
   outline: white;
+  display: inline;
+  text-align: center;
 }
 
 ul {
-  list-style: inherit;
-  text-align: left;
-  padding: 15px;
-  background: #171a1f;
-  border-radius: 15px;
-  color: #6f88d5;
+  list-style: none;
+  display: inline;
+  text-align: center;
+  
 }
 
 li {
-  padding: 15px;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  background: #282c34;
-  border-radius: 5px;
-  overflow-wrap: break-word;
-  cursor: pointer;
+
+  list-style: none;
+  
 }
 
 .RepeatingBackground{
@@ -162,20 +158,36 @@ font-weight: 600;
   color: rgba(255, 255, 255, 0.79);
   font-family: 'Poppins', sans-serif;
   position: absolute;
-width: 1440px;
+
 height: 353px;
 top: 610px;
 }
 .TracksHeading{
- text-align: center;
-  position: absolute;
+  text-align: center;
+  position: static;
 font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 64px;
-line-height: 96px;
-top: 1050px;
+font-weight: 700;
+font-size: 80px;
+top: 1080px;
 color: rgba(253, 247, 247, 0.92);
+
+}
+.SubTracksHeading{
+  text-align: center;
+  position: static;
+font-family: 'Poppins';
+font-weight: 500;
+font-size: 50px;
+top: 1150px;
+color: rgba(253, 247, 247, 0.92);
+}
+
+.TrackDescriptions{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  color: white;
+  position:fixed;
 }
 
 

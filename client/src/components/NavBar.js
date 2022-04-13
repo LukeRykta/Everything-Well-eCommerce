@@ -9,7 +9,7 @@ const NavBar = () => {
     console.log("HERE",user.role === 'ADMIN');
 
     return (
-        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="sm"  variant="dark" className="color-nav">
             <Container>
                 <Navbar.Brand>
                     <Link to="/" style={{ textDecoration: 'none', color: "white", margin: 0}}>
