@@ -2,6 +2,7 @@ import React from 'react';
 import './views/css/Home.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import MainPage from "./views/pages/home";
+import TrackPart from "./views/pages/tracks";
 import NotFoundPage from "./views/pages/404";
 import ListTest from "./views/pages/todo";
 import FitPage from "./views/pages/fitness";
@@ -23,6 +24,7 @@ function App () {
             <NavBar/>
             <Routes>
                 <Route path="/" element={<MainPage />} /> //Route to main page
+                <Route path="/tracks" element={<TrackPart />} /> //Route to track page
                 <Route element={<AdminRoute/>}>
                     <Route path="/addItem" element={<AddItem />} /> //page to create new item
                 </Route>
