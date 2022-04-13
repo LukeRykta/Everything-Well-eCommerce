@@ -79,10 +79,18 @@ const MainPage = () => {
         <div className="AboutUs">
         <br />
             <div className="container-fluid TracksHeading">
-                About Us
+                About Us<br />
             </div>
             <div className="AboutDescription">
+                <p>At Everything Well, our goal is to help you reach your full potential! In order to do this we have created 3
+                    tracks for you to choose from; Nutrition, Wellness, & Fitness. Under each track you will find products to buy
+                    to further your journey. Weather it be working out more, having more meditation time, or even eating cleaner, 
+                    you will find what you need here. 
 
+                </p>
+                <br />
+                <br />
+                <br />
 
             </div>
         </div>

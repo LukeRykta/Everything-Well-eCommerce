@@ -206,14 +206,7 @@ font-size: 50px;
   word-spacing: 450px;
   position: static;
 }
-a{
-  font-family: 'Poppins';
-  font-weight: 500;
-font-size: 50px;
-  text-align: center;
-  word-spacing: 450px;
-  position: static;
-}
+
 .AboutUs{
   background-color: #6CAF98;
   ;
@@ -221,6 +214,13 @@ font-size: 50px;
 .AboutDescription{
   align-items: center;
   text-align: center;
+  position: static;
+font-family: 'Poppins';
+font-weight: 500;
+font-size: 30px;
+color: rgba(253, 247, 247, 0.92);
+margin-left: 200px;
+margin-right: 200px;
 }
 
 
