@@ -14,26 +14,44 @@ const MainPage = () => {
     }
 
     return(
-        <div className="TestBackground">
+        <div>
+            <div className="TestBackground">
+
+
 
             <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "50%"}} >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
+            </div>
+
+            
+            <div 
+            style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: "center",
+                lineHeight:"100px",
+            }}className="container-fluid MainHeading">Disover Your Life<br /> And Do it Well</div>
+            <div className="container-fluid SubMainHeading ">Take control of your life</div>
+           
             
 
                 
         </div>
-        
-        <div className="MainHeading">Disover Your Life<br /> And Do it Well</div>
-        <div className="SubMainHeading">Take control of your life</div>
-            
+          
         <div 
             style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center"
             }} className="TrackListing">
-            
+            <br />
+            <div className="TracksHeading">
+                Tracks
+            </div>
+           
+            <div className="TrackIcons">
             <span>
+            <br />
             <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
 
             <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
@@ -41,6 +59,9 @@ const MainPage = () => {
             <a href='/fitness'><img src={require("../../views/assets/fitness2.png")} /></a>
 
             </span>
+
+            </div>
+            
     
         </div>
             
