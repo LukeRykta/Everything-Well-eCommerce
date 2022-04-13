@@ -35,7 +35,7 @@ authrouter.post("/login", async (req, res) => {
     const {email, password} = req.body;
     const user = await Auth.findOne({email});
     if (!user) {
-        return res.status(501).json({message: "Please check credentials"})
+        return res.status(502).send({message: "Please check credentials"});
     }
     const validPassword = bcrypt.compareSync(password, user.password);
     if (!validPassword) {

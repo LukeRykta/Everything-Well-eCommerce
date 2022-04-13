@@ -4,10 +4,10 @@ import {Link} from "react-router-dom";
 const FitPage = () => {
     return(
         <div className="FitBackground">
-            <div className="Page">
+            <div className="mt-5 text-center container">
                 <h1>Welcome to the Fitness Page</h1>
-                <button>
-                    <Link to="/" className="Home">return</Link>
+                <button className="btn btn-success">
+                    <Link to="/" className="Home" style={{textDecoration: 'none'}}>return</Link>
                 </button>
             </div>
         </div>

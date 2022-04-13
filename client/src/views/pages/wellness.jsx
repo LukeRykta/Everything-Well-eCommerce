@@ -3,11 +3,11 @@ import {Link} from "react-router-dom";
 
 const WellPage = () => {
     return(
-        <div className="WellBackground">
-            <div className="Home">
+        <div className="FitBackground">
+            <div className="mt-5 text-center container">
                 <h1>Welcome to the Wellness Page</h1>
-                <button>
-                    <Link to="/" className="Home">return</Link>
+                <button className="btn btn-success">
+                    <Link to="/" className="Home" style={{textDecoration: 'none'}}>return</Link>
                 </button>
             </div>
         </div>

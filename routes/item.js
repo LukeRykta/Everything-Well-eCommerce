@@ -34,9 +34,9 @@ itemrouter.post('/item', async (req, res) => {
 })
 
 // PUT/item -> update
-itemrouter.put("/item/:id", async (req, res) => {
+itemrouter.put('/item/:id', async (req, res) => {
     const { id } = req.params;
-    const itemToUpdate = await Item.findByIdAndUpdate(id, req.body, {new: true})
+    const itemToUpdate = await Item.findByIdAndUpdate(id, req.body, {new: true});
     try {
         return res.status(202).json(itemToUpdate);
     } catch (error) {
@@ -47,9 +47,9 @@ itemrouter.put("/item/:id", async (req, res) => {
 // DELETE/item/id
 itemrouter.delete("item/:id", async (req, res) => {
     const { id } = req.params;
-    const itemToDelete = await Item.findByIdAndDelete(id)
+    await Item.findByIdAndDelete(id)
     try {
-        return res.status(203).json({message: "Successfully deleted the item"})
+        return res.status(203).json({message: "Successfully deleted the item"});
     } catch (error) {
         return res.status(500).json({message: "Unable to delete the item"})
     }

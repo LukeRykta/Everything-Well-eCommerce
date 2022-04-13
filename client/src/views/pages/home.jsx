@@ -2,32 +2,90 @@ import React from "react";
 import {Link} from "react-router-dom";
 import {Row} from "react-bootstrap";
 import {isAuthenticated} from "../../services/authService";
+import {nutritionImage} from "../../views/assets/nutrition.png";
+
+
 
 const MainPage = () => {
+    const user = isAuthenticated();
+    let name = user.name;
+    if (name==null){
+        name = "Guest";
+    }
+
     return(
-        <div className="container mt-5">
-            <div className="text-center">
-                <h1>Welcome to the Home Page</h1>
-                <div className="container">
-                    <Row className="mt-5 ">
-                        <Link to="/todo" style={{ textDecoration: 'none'}}>
-                            <button className="btn btn-outline-dark my-1">To-Do</button>
-                        </Link>
+        <div>
+            <div className="TestBackground">
 
-                        <Link to="/fitness" style={{ textDecoration: 'none'}}>
-                            <button className="btn btn-outline-dark my-1">Fitness</button>
-                        </Link>
 
-                        <Link to="/nutrition" style={{ textDecoration: 'none' }}>
-                            <button className="btn btn-outline-dark my-1">Nutrition</button>
-                        </Link>
 
-                        <Link to="/wellness" style={{ textDecoration: 'none' }}>
-                            <button className="btn btn-outline-dark my-1">Wellness</button>
-                        </Link>
-                    </Row>
-                </div>
+            <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "50%"}} >
+                <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
             </div>
+
+            
+            <div 
+            style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: "center",
+                lineHeight:"100px",
+            }}className="container-fluid MainHeading">Disover Your Life<br /> And Do it Well</div>
+            <div className="container-fluid SubMainHeading ">Take control of your life</div>
+           
+            
+
+                
+        </div>
+          
+        <div className="TrackListing">
+            <br />
+           
+            <ul>
+                <li>
+                <div className="container-fluid TracksHeading">
+                Tracks
+            </div>
+
+                </li>
+                <li>
+                <div className="container-fluid SubTracksHeading">Click on a track to get started on your journey</div>
+                </li>
+            
+
+            </ul>
+            
+           
+           
+            
+            <span>
+            <br />
+            <ul>
+                <li>
+                <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
+
+                <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
+
+                <a href='/fitness'><img src={require("../../views/assets/fitness2.png")} /></a>
+
+                </li>
+                <li>
+                   <div className="TrackDescriptions">Nutrition</div>
+                </li>
+               
+                
+
+            </ul>
+
+            
+
+            </span>
+
+            
+            
+    
+        </div>
+            
         </div>
     );
 }
