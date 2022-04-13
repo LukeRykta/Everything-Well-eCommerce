@@ -62,28 +62,29 @@ const MainPage = () => {
             <br />
             <ul>
                 <li>
-                <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
+                <a className="TrackImage" href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
 
-                <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
+                <a className="TrackImage" href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
 
-                <a href='/fitness'><img src={require("../../views/assets/fitness2.png")} /></a>
-
-                </li>
-                <li>
-                   <div className="TrackDescriptions">Nutrition</div>
-                </li>
-               
+                <a className="TrackImage" href='/fitness'><img src={require("../../views/assets/fitness.png")} /></a>
                 
-
+                </li>
+                
             </ul>
 
-            
-
             </span>
+            <br />
+            <br />
+        </div>
+        <div className="AboutUs">
+        <br />
+            <div className="container-fluid TracksHeading">
+                About Us
+            </div>
+            <div className="AboutDescription">
 
-            
-            
-    
+
+            </div>
         </div>
             
         </div>
