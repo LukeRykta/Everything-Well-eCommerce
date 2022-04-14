@@ -10,7 +10,8 @@ const AddItem = () => {
         title: "",
         vendor: "",
         image: "",
-        price: ""
+        price: "",
+        quantity: '',
     });
 
     const handleChange = (event) => {
@@ -30,6 +31,7 @@ const AddItem = () => {
             author: '',
             image: '',
             price: '',
+            quantity: '',
         });
         window.location.reload()
     }
@@ -42,35 +44,43 @@ const AddItem = () => {
                     <h2 className="text-center">Create New Item</h2>
                     <Row>
                         <input
-                            name="title"
                             onChange={handleChange}
+                            name="title"
                             value={item.title}
                             className="form-control mt-4"
                             placeholder="item name"
                             type="text"
                         />
                         <input
-                            name="vendor"
                             onChange={handleChange}
+                            name="vendor"
                             value={item.vendor}
                             className="form-control"
                             placeholder="vendor"
                             type="text"
                         />
                         <input
-                            name="image"
                             onChange={handleChange}
+                            name="image"
                             value={item.image}
                             className="form-control"
                             placeholder="image (url)"
                             type="text"
                         />
                         <input
-                            name="price"
                             onChange={handleChange}
+                            name="price"
                             value={item.price}
                             className="form-control"
                             placeholder="price"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="quantity"
+                            value={item.quantity}
+                            className="form-control"
+                            placeholder="quantity"
                             type="text"
                         />
                         <button

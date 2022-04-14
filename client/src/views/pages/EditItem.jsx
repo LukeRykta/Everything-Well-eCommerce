@@ -10,6 +10,7 @@ const EditItem = () => {
         vendor: "",
         image: "",
         price: "",
+        quantity: "",
     });
 
     useEffect(() => {
@@ -33,6 +34,7 @@ const EditItem = () => {
             vendor: '',
             image: '',
             price: '',
+            quantity: '',
         });
         navigate("/nutrition")
     }
@@ -48,44 +50,56 @@ const EditItem = () => {
     }
 
     return (
-        <div className="container mt-5 text-center">
-            <form onSubmit={handleSubmit} className="form">
-                <h2 className="mb-4">Edit Item</h2>
-                <input
-                    onChange={handleChange}
-                    value={item.title}
-                    name="title"
-                    className="form-control"
-                    placeholder="title"
-                    type="text"
-                />
-                <input
-                    onChange={handleChange}
-                    name="vendor"
-                    value={item.vendor}
-                    className="form-control"
-                    placeholder="vendor"
-                    type="text"
-                />
-                <input
-                    onChange={handleChange}
-                    name="image"
-                    value={item.image}
-                    className="form-control"
-                    placeholder="image (url)"
-                    type="text"
-                />
-                <input
-                    onChange={handleChange}
-                    name="price"
-                    value={item.price}
-                    className="form-control"
-                    placeholder="price"
-                    type="text"
-                />
-                <button className="form-control btn btn-outline-success mt-4 mb-2">Save Changes</button>
-                <button onClick={handleDelete} className="form-control btn btn-outline-danger">Delete Item</button>
-            </form>
+        <div className="FitBackground">
+            <div className="container mt-5 text-center">
+                <div style={{paddingTop: "5%"}}>
+                    <form onSubmit={handleSubmit} className="form bg-light shadow-lg border-3">
+                        <h2 className="mb-4">Edit Item</h2>
+                        <input
+                            onChange={handleChange}
+                            value={item.title}
+                            name="title"
+                            className="form-control"
+                            placeholder="title"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="vendor"
+                            value={item.vendor}
+                            className="form-control"
+                            placeholder="vendor"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="image"
+                            value={item.image}
+                            className="form-control"
+                            placeholder="image (url)"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="price"
+                            value={item.price}
+                            className="form-control"
+                            placeholder="price"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="quantity"
+                            value={item.quantity}
+                            className="form-control"
+                            placeholder="quantity"
+                            type="text"
+                        />
+                        <button className="form-control btn btn-outline-success mt-4 mb-2">Save Changes</button>
+                        <button onClick={handleDelete} className="form-control btn btn-outline-danger">Delete Item</button>
+                    </form>
+                </div>
+            </div>
         </div>
     )
 }
