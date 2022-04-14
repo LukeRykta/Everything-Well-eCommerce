@@ -28,22 +28,23 @@ const EditItem = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         await editItem(item, id);
-        navigate("/nutrition")
         setItem({
             title: '',
             vendor: '',
             image: '',
             price: '',
         });
-        window.location.reload();
+        navigate("/nutrition")
     }
 
     const handleDelete = async (event) => {
         event.preventDefault();
         const choice = window.confirm("Are you sure you want to delete this item?");
-        if (!choice) return;
+        if (!choice)
+            return;
         deleteItem(id)
         navigate("/nutrition");
+        window.location.reload();
     }
 
     return (
