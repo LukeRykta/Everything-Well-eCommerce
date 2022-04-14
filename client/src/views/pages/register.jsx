@@ -35,6 +35,7 @@ const Register = () => {
 
     return (
         <div className="FitBackground">
+            <div style={{paddingTop: "5%"}}>
             <div className="text-center container col-11, mt-5 ">
                 <form onSubmit={handleSubmit} className="form mt-5 bg-light shadow-lg border-3">
                     <h2>Create an Account</h2>
@@ -91,6 +92,7 @@ const Register = () => {
                         </div>
                     </Row>
                 </form>
+            </div>
             </div>
         </div>
     )

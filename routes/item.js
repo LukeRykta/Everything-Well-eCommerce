@@ -45,7 +45,7 @@ itemrouter.put('/item/:id', async (req, res) => {
 })
 
 // DELETE/item/id
-itemrouter.delete("item/:id", async (req, res) => {
+itemrouter.delete("/item/:id", async (req, res) => {
     const { id } = req.params;
     await Item.findByIdAndDelete(id)
     try {

@@ -1,10 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {Row} from "react-bootstrap";
 import {isAuthenticated} from "../../services/authService";
-import {nutritionImage} from "../../views/assets/nutrition.png";
-
-
 
 const MainPage = () => {
     const user = isAuthenticated();
@@ -17,25 +12,20 @@ const MainPage = () => {
         <div>
             <div className="TestBackground">
 
-
-
-            <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "50%"}} >
+            <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "40%"}} >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
             </div>
 
-            
             <div 
             style={{
                 flex: 1,
                 justifyContent: 'center',
                 alignItems: "center",
                 lineHeight:"100px",
-            }}className="container-fluid MainHeading">Disover Your Life<br /> And Do it Well</div>
-            <div className="container-fluid SubMainHeading ">Take control of your life</div>
-           
-            
+                width: "97%",
+            }} className="container-fluid MainHeading flex-column">Disover Your Life<br /> And Do it Well</div>
+            <div style= {{width: "97%"}} className="container-fluid SubMainHeading ">Take control of your life</div>
 
-                
         </div>
           
         <div className="TrackListing">
@@ -44,20 +34,15 @@ const MainPage = () => {
             <ul>
                 <li>
                 <div className="container-fluid TracksHeading">
-                Tracks
-            </div>
+                    Tracks
+                </div>
 
                 </li>
                 <li>
-                <div className="container-fluid SubTracksHeading">Click on a track to get started on your journey</div>
+                    <div className="container-fluid SubTracksHeading">Click on a track to get started on your journey</div>
                 </li>
-            
-
             </ul>
-            
-           
-           
-            
+
             <span>
             <br />
             <ul>
@@ -82,9 +67,9 @@ const MainPage = () => {
                 About Us<br />
             </div>
             <div className="AboutDescription">
-                <p>At Everything Well, our goal is to help you reach your full potential! In order to do this we have created 3
-                    tracks for you to choose from; Nutrition, Wellness, & Fitness. Under each track you will find products to buy
-                    to further your journey. Weather it be working out more, having more meditation time, or even eating cleaner, 
+                <p>At Everything Well, our goal is to help you reach your full potential! In order to do this we have created three
+                    tracks for you to choose from: Nutrition, Wellness, & Fitness. Under each track you will find products to buy
+                    to further your journey. Whether it be working out more, having more meditation time, or even eating cleaner,
                     you will find what you need here. 
 
                 </p>
