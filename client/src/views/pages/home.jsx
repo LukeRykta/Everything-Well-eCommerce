@@ -1,10 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {Row} from "react-bootstrap";
 import {isAuthenticated} from "../../services/authService";
-import {nutritionImage} from "../../views/assets/nutrition.png";
-
-
 
 const MainPage = () => {
     const user = isAuthenticated();
