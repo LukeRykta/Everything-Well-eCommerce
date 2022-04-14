@@ -72,6 +72,14 @@ const AddItem = () => {
                             placeholder="price"
                             type="text"
                         />
+                        <input
+                            name="quantity"
+                            onChange={handleChange}
+                            value={item.quantity}
+                            className="form-control"
+                            placeholder="quantity"
+                            type="text"
+                        />
                         <button
                             onClick={handleSubmit}
                             className="btn btn-outline-success mt-4">
