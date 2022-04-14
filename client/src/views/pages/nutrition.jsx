@@ -28,7 +28,9 @@ const NutPage = () => {
                     <div className="row">
                         {items.map((item) => (
                             <div key={item._id} className="px-5 my-3 col-lg-4 col-md-6 col-sm-12">
-                                <ItemCard obj={item} />
+                                { item.track === "nutrition" &&(
+                                    <ItemCard obj={item} />
+                                )}
                             </div>
                         ))}
                     </div>

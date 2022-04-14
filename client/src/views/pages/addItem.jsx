@@ -12,6 +12,7 @@ const AddItem = () => {
         image: "",
         price: "",
         quantity: '',
+        track: '',
     });
 
     const handleChange = (event) => {
@@ -32,6 +33,7 @@ const AddItem = () => {
             image: '',
             price: '',
             quantity: '',
+            track: '',
         });
         window.location.reload()
     }
@@ -64,7 +66,7 @@ const AddItem = () => {
                             name="image"
                             value={item.image}
                             className="form-control"
-                            placeholder="image (url)"
+                            placeholder="image  (url)"
                             type="text"
                         />
                         <input
@@ -81,6 +83,14 @@ const AddItem = () => {
                             value={item.quantity}
                             className="form-control"
                             placeholder="quantity"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="track"
+                            value={item.track}
+                            className="form-control"
+                            placeholder="track  (nutrition / wellness / fitness)"
                             type="text"
                         />
                         <button

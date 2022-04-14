@@ -11,6 +11,7 @@ const EditItem = () => {
         image: "",
         price: "",
         quantity: "",
+        track: '',
     });
 
     useEffect(() => {
@@ -35,8 +36,9 @@ const EditItem = () => {
             image: '',
             price: '',
             quantity: '',
+            track: '',
         });
-        navigate("/nutrition")
+        navigate("/")
     }
 
     const handleDelete = async (event) => {
@@ -45,7 +47,7 @@ const EditItem = () => {
         if (!choice)
             return;
         deleteItem(id)
-        navigate("/nutrition");
+        navigate("/");
         window.location.reload();
     }
 
@@ -93,6 +95,14 @@ const EditItem = () => {
                             value={item.quantity}
                             className="form-control"
                             placeholder="quantity"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="track"
+                            value={item.track}
+                            className="form-control"
+                            placeholder="track"
                             type="text"
                         />
                         <button className="form-control btn btn-outline-success mt-4 mb-2">Save Changes</button>
