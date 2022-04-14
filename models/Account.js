@@ -1,3 +1,4 @@
+const { DateRange } = require('@material-ui/icons');
 const mongoose = require('mongoose');
 
 const { Schema, model } = mongoose;
@@ -56,8 +57,11 @@ const UserSchema = Schema (
         createDate: {
             type: Date,
             default: Date.now()
+        },
+        lastLoginDate: {
+            type: Date,
+            default: null
         }
-
 
     }
 );
