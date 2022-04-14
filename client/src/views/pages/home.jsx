@@ -22,9 +22,9 @@ const MainPage = () => {
                 justifyContent: 'center',
                 alignItems: "center",
                 lineHeight:"100px",
-                width: "97%",
-            }} className="container-fluid MainHeading flex-column">Disover Your Life<br /> And Do it Well</div>
-            <div style= {{width: "97%"}} className="container-fluid SubMainHeading ">Take control of your life</div>
+
+            }} className="container-fluid MainHeading flex-column">Discover Your Life<br /> And Do it Well</div>
+            <div className="container-fluid SubMainHeading ">Take control of your life</div>
 
         </div>
           
@@ -43,31 +43,17 @@ const MainPage = () => {
                 
                 </li>
             </ul>
-            
-           
-           
-            
-           
 
-           
             <br />
             <div className="container-fluid">
             <ul>
-                <li><img src={require("../../views/assets/nutrition.png")}/><a href="…" className="TrackName">Nutrtion</a></li>
-                <li><img src={require("../../views/assets/wellness.png")}/><a href="…" className="TrackName">Wellness</a></li>
-                <li><img src={require("../../views/assets/fitness.png")}/><a href="…" className="TrackName">Fitness</a></li>
+                <li><img src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
+                <li><img src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
+                <li><img src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
                
             </ul>
             </div>
-            
 
-            
-          
-
-
-
-
-            
             <br />
             <br />
         </div>
