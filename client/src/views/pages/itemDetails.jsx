@@ -28,9 +28,22 @@ const ItemDetails = () => {
                 <div className="mt-5 container">
                     <img style={{width: "75%"}} src={item.image} alt="image not found :/" />
                 </div>
-                <h4 className="mt-5"><span style={{color: "blue"}}>{item.quantity}</span> in stock</h4>
+                { item.quantity <= 0 &&(
+                    <h4 className="" style={{color: "red"}}>Out of Stock</h4>
+                )}
+                { item.quantity > 0 &&(
+                    <h4 className="mt-5"><span style={{color: "blue"}}>{item.quantity}</span> in stock</h4>
+                )}
+                { item.quantity == null &&(
+                    <h4 className="mt-5" style={{color: "darkgray"}}>This item is no longer available.</h4>
+                )}
                 <div className="card-img-bottom mt-5">
-                    <button className="btn btn-success mx-1 my-1">Add to Cart</button>
+                    { item.quantity <= 0 &&(
+                        <button disabled className="btn btn-success mx-1 my-1">Add to Cart</button>
+                    )}
+                    { item.quantity > 0 &&(
+                        <button className="btn btn-success mx-1 my-1">Add to Cart</button>
+                    )}
                     { user.role === 'ADMIN' &&(
                         <Link to={`/editItem/${item._id}`} style={{ textDecoration: 'none' }}>
                             <button className="btn btn-danger mx-1 my-1">Edit</button>
@@ -42,6 +55,7 @@ const ItemDetails = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 

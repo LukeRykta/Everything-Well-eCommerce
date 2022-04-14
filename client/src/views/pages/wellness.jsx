@@ -1,14 +1,37 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
+import {getAllItems} from "../../services/itemService";
+import ItemCard from "../../components/ItemCard";
 
 const WellPage = () => {
+    const banner = "Welcome to the Wellness Page";
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        getItems();
+    }, [])
+
+    async function getItems() {
+        const response = await getAllItems();
+        setItems(response.data);
+    }
+
     return(
-        <div className="FitBackground">
-            <div className="mt-5 text-center container">
-                <h1>Welcome to the Wellness Page</h1>
-                <button className="btn btn-success">
-                    <Link to="/" className="Home" style={{textDecoration: 'none'}}>return</Link>
-                </button>
+        <div className="RepeatingBackground">
+            <div className="container mt-5">
+                <div className="px-5 py-2 form-label bg-light itemCard">
+                    <h2>Wellness Page</h2>
+                    <p className="blockquote">{banner}</p>
+                </div>
+                <div className="container">
+                    <div className="row">
+                        {items.map((item) => (
+                            <div key={item._id} className="px-5 my-3 col-lg-4 col-md-6 col-sm-12">
+                                <ItemCard obj={item} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );
