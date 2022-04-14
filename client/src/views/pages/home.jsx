@@ -89,6 +89,16 @@ const MainPage = () => {
 
             </div>
         </div>
+        <div className="HomeFooter">
+
+        <ul>
+                <li>pee</li>
+                <li>poo</li>
+                <li>fart</li>
+                
+               
+            </ul>
+        </div>
             
         </div>
     );
