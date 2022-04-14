@@ -27,7 +27,7 @@ const AddItem = () => {
         navigate('/nutrition')
         setItem({
             title: '',
-            author: '',
+            author: '', //where is this from? - 
             image: '',
             price: '',
         });
