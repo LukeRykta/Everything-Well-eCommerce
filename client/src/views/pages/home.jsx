@@ -41,14 +41,14 @@ const MainPage = () => {
         <div className="TrackListing">
             <br />
            
-            <ul>
-                <li>
+            <ul style={{display: "inline"}}>
+                <li style={{display: "inline"}}>
                 <div className="container-fluid TracksHeading">
                 Tracks
             </div>
 
                 </li>
-                <li>
+                <li style={{display: "inline"}}> 
                 <div className="container-fluid SubTracksHeading">Click on a track to get started on your journey</div>
                 </li>
             
@@ -58,21 +58,25 @@ const MainPage = () => {
            
            
             
-            <span>
+           
             <br />
+            <div className="container-fluid">
             <ul>
-                <li>
-                <a className="TrackImage" href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
-
-                <a className="TrackImage" href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
-
-                <a className="TrackImage" href='/fitness'><img src={require("../../views/assets/fitness.png")} /></a>
-                
-                </li>
-                
+                <li><img src={require("../../views/assets/nutrition.png")}/><a href="…" className="TrackName">Nutrtion</a></li>
+                <li><img src={require("../../views/assets/wellness.png")}/><a href="…" className="TrackName">Wellness</a></li>
+                <li><img src={require("../../views/assets/fitness.png")}/><a href="…" className="TrackName">Fitness</a></li>
+               
             </ul>
+            </div>
+            
 
-            </span>
+            
+          
+
+
+
+
+            
             <br />
             <br />
         </div>

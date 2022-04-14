@@ -7,6 +7,7 @@ import {Row} from "react-bootstrap";
 import "../css/Form.css"
 import {loginUser} from "../../services/authService";
 
+
 const LoginPage = () => {
 
     const [user, setUser] = useState({
@@ -50,7 +51,13 @@ const LoginPage = () => {
 
     return(
         <div className="FitBackground">
+            
+            
             <div className="text-center mt-5" style={{height: "100%", width: "100%", display: "flex", margin: "auto"}}>
+            <div className="LoginBox">
+                
+                </div>
+
                 <form onSubmit={handleSubmit} className="form bg-light shadow-lg border-3">
                     <h2 className="card-title">Sign In</h2>
                     <Row>
