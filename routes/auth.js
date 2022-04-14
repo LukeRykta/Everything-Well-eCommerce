@@ -2,7 +2,7 @@ const express = require('express');
 const authrouter = express.Router();
 const bcrypt = require('bcrypt');
 
-const Auth = require('../models/User');
+const Auth = require('../models/Account');
 const {generateJwt} = require("../helpers/processJwt");
 
 authrouter.get("/", async (req, res) => {
