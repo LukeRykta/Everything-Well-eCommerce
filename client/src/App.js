@@ -28,7 +28,7 @@ function App () {
                 <Route element={<AdminRoute/>}>
                     <Route path="/addItem" element={<AddItem />} /> //page to create new item
                 </Route>
-                <Route element={<AuthRoute />}> //Contains routes to protected pages (admin)
+                    <Route element={<AuthRoute />}> //Contains routes to protected pages (admin)
                 </Route>
                 <Route path="*" element={<NotFoundPage />} /> //default 404 page
                 <Route path="/register" element={<Register />} />

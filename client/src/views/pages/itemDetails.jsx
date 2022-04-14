@@ -28,6 +28,7 @@ const ItemDetails = () => {
                 <div className="mt-5 container">
                     <img style={{width: "75%"}} src={item.image} alt="image not found :/" />
                 </div>
+                <h4 className="mt-5"><span style={{color: "blue"}}>{item.quantity}</span> in stock</h4>
                 <div className="card-img-bottom mt-5">
                     <button className="btn btn-success mx-1 my-1">Add to Cart</button>
                     { user.role === 'ADMIN' &&(
