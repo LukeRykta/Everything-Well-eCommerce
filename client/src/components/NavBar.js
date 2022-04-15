@@ -23,7 +23,7 @@ const NavBar = () => {
                             <Nav.Link href="/addItem">Create</Nav.Link>
                         )}
                         { user.role === 'ADMIN' && (
-                            <Nav.Link href="#deleteItem">Delete</Nav.Link>
+                            <Nav.Link href="/Settings">Settings</Nav.Link>
                         )}
                     </Nav>
                     <Nav>

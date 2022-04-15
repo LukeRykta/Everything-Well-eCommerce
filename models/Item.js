@@ -20,6 +20,10 @@ const ItemSchema = Schema (
         },
         quantity: {
             type: Number
+        },
+        track: {
+            type: String,
+            required: true
         }
     }
 )

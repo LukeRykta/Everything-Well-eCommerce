@@ -64,21 +64,29 @@ button {
 
 button:focus {
   outline: white;
-  display: inline;
-  text-align: center;
+  
+ 
 }
 
 ul {
-  list-style: none;
-  display: inline;
-  text-align: center;
-  
+  list-style-type: none;
+ 
 }
 
-li {
 
-  list-style: none;
+li {
+  text-align: center;
+  display: inline-block;
+  padding-bottom: 20px;
+  padding: 50px;
   
+  
+  
+  
+  
+}
+a{
+  display: block;
 }
 
 .RepeatingBackground{
@@ -109,7 +117,8 @@ li {
 }
 
 .FitBackground {
-  background-image: linear-gradient(#66d37e, #083836);
+  /*background-image: linear-gradient(#66d37e, #083836);*/
+  background-color: #A7D7C5;
   background-attachment: fixed;
   min-height: 100vh;
   flex: auto;
@@ -121,7 +130,7 @@ li {
 .TestBackground {
   background-image: url("../assets/bg.jpg");
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 90vh;
   background-size: cover;
   overflow: hidden;
   
@@ -134,7 +143,6 @@ li {
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins&display=swap');
 .MainHeading{
   text-align: center;
-  position: absolute;
   font-size: 100px;
   width: 100%;
   margin-left: auto;
@@ -157,7 +165,12 @@ font-weight: 600;
   margin-right: auto;
   color: rgba(255, 255, 255, 0.79);
   font-family: 'Poppins', sans-serif;
-  position: absolute;
+  width: 1440px;
+height: 353px;
+left: 50px;
+top: 410px;
+
+  
 
 height: 353px;
 top: 610px;
@@ -188,6 +201,39 @@ color: rgba(253, 247, 247, 0.92);
   font-weight: 600;
   color: white;
   position:fixed;
+}
+.TrackImage{
+  padding: 90px;
+  position: relative;
+}
+.TrackName{
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 600;
+font-size: 50px;
+  word-spacing: 450px; 
+}
+
+
+.AboutUs{
+  background-color: #6CAF98;
+  ;
+}
+.AboutDescription{
+  align-items: center;
+  text-align: center;
+  position: static;
+font-family: 'Poppins';
+font-weight: 500;
+font-size: 30px;
+color: rgba(253, 247, 247, 0.92);
+margin-left: 200px;
+margin-right: 200px;
+}
+.HomeFooter{
+  background-color: rgba(148, 211, 189, 0.25);
+  
 }
 
 
