@@ -1,5 +1,8 @@
 import React from "react";
 import {isAuthenticated} from "../../services/authService";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 
 const MainPage = () => {
     const user = isAuthenticated();
@@ -9,9 +12,10 @@ const MainPage = () => {
     }
 
     return(
+
         <div>
             <div className="TestBackground">
-
+            
             <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "40%"}} >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
             </div>
@@ -22,9 +26,9 @@ const MainPage = () => {
                 justifyContent: 'center',
                 alignItems: "center",
                 lineHeight:"100px",
-
-            }} className="container-fluid MainHeading flex-column">Discover Your Life<br /> And Do it Well</div>
-            <div className="container-fluid SubMainHeading ">Take control of your life</div>
+                width: "97%",
+            }} className="container-fluid MainHeading flex-column">Disover Your Life<br /> And Do it Well</div>
+            <div style= {{width: "97%"}} className="container-fluid SubMainHeading ">Take control of your life</div>
 
         </div>
           
@@ -47,13 +51,12 @@ const MainPage = () => {
             <br />
             <div className="container-fluid">
             <ul>
-                <li><img src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
-                <li><img src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
-                <li><img src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
+                <li><img src={require("../../views/assets/nutrition.png")}/><a href="…" className="TrackName">Nutrtion</a></li>
+                <li><img src={require("../../views/assets/wellness.png")}/><a href="…" className="TrackName">Wellness</a></li>
+                <li><img src={require("../../views/assets/fitness.png")}/><a href="…" className="TrackName">Fitness</a></li>
                
             </ul>
-            </div>
-
+            </div>   
             <br />
             <br />
         </div>
@@ -76,15 +79,22 @@ const MainPage = () => {
             </div>
         </div>
         <div className="HomeFooter">
+        <div className="container-fluid">
+            <ul>
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                        <p className="FooterHeaders">Around the Web</p>
+                        <FontAwesomeIcon icon={faFacebook} size="4x" className="icon" beat/>
+                        <FontAwesomeIcon icon={faTwitter} size="4x" className="icon" beat/>
+                        <FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>   
+                    </div>
 
-        <ul>
-                <li>pee</li>
-                <li>poo</li>
-                <li>fart</li>
-                
+                    
                
             </ul>
+            </div>   
         </div>
+
+        
             
         </div>
     );

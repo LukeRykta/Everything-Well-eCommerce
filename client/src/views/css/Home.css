@@ -216,6 +216,7 @@ font-size: 50px;
 }
 
 
+
 .AboutUs{
   background-color: #6CAF98;
   ;
@@ -232,8 +233,20 @@ margin-left: 200px;
 margin-right: 200px;
 }
 .HomeFooter{
-  background-color: rgba(148, 211, 189, 0.25);
-  
+  background-color: rgba(145, 181, 229, 1);
+  font-family: 'Poppins';
+  padding: 15px;  
+}
+.FooterHeaders{
+  font-family: 'Poppins';
+font-weight: 1000;
+font-size: 30px;
+color: white;
+
+}
+.icon{
+  padding: 10px;
+  color: white;
 }
 
 
