@@ -13,6 +13,7 @@ const AddItem = () => {
         price: "",
         quantity: '',
         track: '',
+        description: '',
     });
 
     const handleChange = (event) => {
@@ -34,6 +35,7 @@ const AddItem = () => {
             price: '',
             quantity: '',
             track: '',
+            description: '',
         });
         window.location.reload()
     }
@@ -91,6 +93,14 @@ const AddItem = () => {
                             value={item.track}
                             className="form-control"
                             placeholder="track  (nutrition / wellness / fitness)"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            name="track"
+                            value={item.description}
+                            className="form-control"
+                            placeholder="item description"
                             type="text"
                         />
                         <button

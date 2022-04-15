@@ -24,6 +24,9 @@ const ItemSchema = Schema (
         track: {
             type: String,
             required: true
+        },
+        description: {
+            type: String
         }
     }
 )

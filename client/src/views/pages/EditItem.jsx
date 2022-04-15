@@ -37,6 +37,7 @@ const EditItem = () => {
             price: '',
             quantity: '',
             track: '',
+            description: '',
         });
         navigate("/")
     }
@@ -103,6 +104,14 @@ const EditItem = () => {
                             value={item.track}
                             className="form-control"
                             placeholder="track"
+                            type="text"
+                        />
+                        <input
+                            onChange={handleChange}
+                            value={item.description}
+                            name="description"
+                            className="form-control"
+                            placeholder="description"
                             type="text"
                         />
                         <button className="form-control btn btn-outline-success mt-4 mb-2">Save Changes</button>

@@ -24,6 +24,7 @@ const ItemDetails = () => {
                 <div className="card-header" style={{borderRadius: "10px"}}>
                     <h1>{item.title}</h1>
                     <h3>${item.price}</h3>
+                    <h5>{item.description}</h5>
                 </div>
                 <div className="mt-5 container">
                     <img style={{width: "75%"}} src={item.image} alt="image not found :/" />
