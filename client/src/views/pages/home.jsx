@@ -32,7 +32,7 @@ const MainPage = () => {
 
         </div>
           
-        <div className="TrackListing">
+        <div id="Tracks" className="TrackListing">
             <br />
            
             <ul style={{display: "inline"}}>
@@ -60,14 +60,14 @@ const MainPage = () => {
             <br />
             <br />
         </div>
-        <div className="AboutUs">
+        <div id="AboutUs" className="AboutUs">
         <br />
             <div className="container-fluid TracksHeading">
                 About Us<br />
             </div>
             <div className="AboutDescription">
                 <p>At Everything Well, our goal is to help you reach your full potential! In order to do this we have created three
-                    tracks for you to choose from: Nutrition, Wellness, & Fitness. Under each track you will find products to buy
+                    tracks for you to choose from: <b>Nutrition, Wellness, & Fitness.</b> Under each track you will find products to buy
                     to further your journey. Whether it be working out more, having more meditation time, or even eating cleaner,
                     you will find what you need here. 
 
@@ -83,16 +83,27 @@ const MainPage = () => {
             <ul>
             <div class="col-lg-4 mb-5 mb-lg-0">
                         <p className="FooterHeaders">Around the Web</p>
+                       
                         <FontAwesomeIcon icon={faFacebook} size="4x" className="icon" beat/>
                         <FontAwesomeIcon icon={faTwitter} size="4x" className="icon" beat/>
-                        <FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>   
-                    </div>
+                        <FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>
+
+                        
+
+                        
+            </div>
+            
+            
+            
+
 
                     
                
             </ul>
             </div>   
+            
         </div>
+        <div className="hello"></div>
 
         
             

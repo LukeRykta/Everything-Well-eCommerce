@@ -39,10 +39,16 @@ const NavBar = () => {
                         ) : (
                             <>
                                 <Nav.Link href="/login">
-                                    Login
+                                    Login 
                                 </Nav.Link>
                                 <Nav.Link eventKey={2} href="/register">
                                     Register
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/#Tracks">
+                                    Tracks
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/#AboutUs">
+                                    About Us
                                 </Nav.Link>
                             </>
                             )
