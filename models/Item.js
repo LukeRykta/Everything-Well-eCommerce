@@ -39,7 +39,7 @@ const ItemSchema = Schema (
         },
         description: {
             type: String
-
+        },
         dateAdded: { // Date item was added
             type: Date,
             default: Date.now()
