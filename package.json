@@ -34,7 +34,7 @@
     "express": "^4.17.3",
     "font-awesome": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.10",
+    "mongoose": "^6.2.11",
     "prop-types": "^15.8.1"
   },
   "devDependencies": {

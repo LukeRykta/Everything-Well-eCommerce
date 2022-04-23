@@ -30,7 +30,7 @@ const AddItem = () => {
         navigate('/nutrition')
         setItem({
             title: '',
-            author: '',
+            author: '', //where is this from? - 
             image: '',
             price: '',
             quantity: '',
@@ -80,6 +80,7 @@ const AddItem = () => {
                             type="text"
                         />
                         <input
+
                             onChange={handleChange}
                             name="quantity"
                             value={item.quantity}
@@ -87,6 +88,7 @@ const AddItem = () => {
                             placeholder="quantity"
                             type="text"
                         />
+
                         <input
                             onChange={handleChange}
                             name="track"
@@ -103,6 +105,7 @@ const AddItem = () => {
                             placeholder="item description"
                             type="text"
                         />
+
                         <button
                             onClick={handleSubmit}
                             className="btn btn-outline-success mt-4">
