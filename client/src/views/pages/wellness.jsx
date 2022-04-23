@@ -17,9 +17,9 @@ const WellPage = () => {
     }
 
     return(
-        <div className="RepeatingBackground">
+        <div className="WellnessBackground">
             <div className="container mt-5">
-                <div className="px-5 py-2 form-label bg-light itemCard">
+                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
                     <h2>Wellness Page</h2>
                     <p className="blockquote">{banner}</p>
                 </div>
