@@ -49,7 +49,7 @@ const MainPage = () => {
             </ul>
 
             <br />
-            <div className="container-fluid">
+            <div className="container-fluid text-center">
             <ul>
                 <li><img src={require("../../views/assets/nutrition.png")}/><a href="./nutrition" className="TrackName">Nutrition</a></li>
                 <li><img src={require("../../views/assets/wellness.png")}/><a href="./wellness" className="TrackName">Wellness</a></li>

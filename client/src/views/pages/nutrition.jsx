@@ -28,9 +28,9 @@ const NutPage = () => {
     }
 
     return(
-        <div className="RepeatingBackground">
+        <div className="NutritionBackground">
             <div className="container mt-5">
-                <div className="px-5 py-2 form-label bg-light itemCard">
+                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(198,232,114,1'}}>
                     <h2>Nutrition Page</h2>
                     <p className="blockquote">{banner}</p>
                 </div>

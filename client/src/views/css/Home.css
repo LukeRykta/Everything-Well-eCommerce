@@ -97,6 +97,31 @@ a{
   background-position: revert;
   overflow: hidden;
 }
+.FitnessBackground{
+  background-color: rgba(255,182,119,1);
+  flex: auto;
+
+  background-repeat: repeat;
+  background-position: revert;
+  overflow: hidden;
+}
+.WellnessBackground{
+  background-color: rgba(165,189,253,1);
+  flex: auto;
+
+  background-repeat: repeat;
+  background-position: revert;
+  overflow: hidden;
+
+}
+.NutritionBackground{
+  background-color: rgba(251,255,163,1);
+  flex: auto;
+
+  background-repeat: repeat;
+  background-position: revert;
+  overflow: hidden;
+}
 
 .HomeBackground {
   background-image: linear-gradient(to bottom right, #6f88d5, #282c34);
