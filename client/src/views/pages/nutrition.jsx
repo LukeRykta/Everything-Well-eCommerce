@@ -7,6 +7,13 @@ const NutPage = () => {
                    "Each card has a btn that redirects to the itemDetails screen which imports " +
                    "the parameters we use for each unique item.";
     const [items, setItems] = useState([]);
+    const relevant_tracks = [];
+
+    items.forEach(function (item){
+       if (item.track === "nutrition"){
+           relevant_tracks.push(item);
+       }
+    });
 
     useEffect(() => {
         getItems();
@@ -18,19 +25,17 @@ const NutPage = () => {
     }
 
     return(
-        <div className="RepeatingBackground">
+        <div className="NutritionBackground">
             <div className="container mt-5">
-                <div className="px-5 py-2 form-label bg-light itemCard">
+                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(198,232,114,1'}}>
                     <h2>Nutrition Page</h2>
                     <p className="blockquote">{banner}</p>
                 </div>
                 <div className="container">
                     <div className="row">
-                        {items.map((item) => (
+                        {relevant_tracks.map((item) => (
                             <div key={item._id} className="px-5 my-3 col-lg-4 col-md-6 col-sm-12">
-                                { item.track === "nutrition" &&(
-                                    <ItemCard obj={item} />
-                                )}
+                                <ItemCard obj={item} />
                             </div>
                         ))}
                     </div>

@@ -97,7 +97,7 @@ const AddItem = () => {
                         />
                         <input
                             onChange={handleChange}
-                            name="track"
+                            name="description"
                             value={item.description}
                             className="form-control"
                             placeholder="item description"
