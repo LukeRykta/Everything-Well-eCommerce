@@ -2,9 +2,11 @@ import {Button, Container, Nav, Navbar} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavBar.css"
 import {isAuthenticated, logOut} from "../services/authService";
-import cartImage from "../views/assets/icons8-buying-30.png";
+import {useSelector} from "react-redux";
 
 const NavBar = () => {
+    const quantity = useSelector(state => state.cart.quantity)
+
     const user = isAuthenticated();
 
     return (
@@ -29,34 +31,28 @@ const NavBar = () => {
                         {user ? (
                             <>
                                 { user.role === 'USER' && (
-                                    <Nav.Link href="/cart" className="mx-2">
-                                        <img style={{width: "1.4rem", height: "1.4rem"}} src={cartImage} alt="Cart"/>
-                                    </Nav.Link>
+                                    <Link to="/cart">
+                                        <i className="fas fa-shopping-cart"></i>
+                                        <span>{" "+quantity+" "}</span>
+                                    </Link>
                                 )}
-                                <Nav.Link href="/account" className="mx-2">
-                                     Account
-                                </Nav.Link>
-                                <Nav.Link eventKey={2} href="/register">
-                                    Register
-                                </Nav.Link>
-                                <Nav.Link eventKey={2} href="/#Tracks">
-                                    Tracks
-                                </Nav.Link>
-                                <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
+                                <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto ">
+                                    <i className="fas fa-sign-out">Log Out</i>
+                                </Button>
                             </>
                         ) : (
                             <>
                                 <Nav.Link href="/login">
                                     Login 
                                 </Nav.Link>
-                                <Nav.Link eventKey={2} href="/#AboutUs">
-                                    About Us
-                                </Nav.Link>
                                 <Nav.Link eventKey={2} href="/register">
                                     Register
                                 </Nav.Link>
                                 <Nav.Link eventKey={2} href="/#Tracks">
                                     Tracks
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/#AboutUs">
+                                    About Us
                                 </Nav.Link>
                             </>
                             )
