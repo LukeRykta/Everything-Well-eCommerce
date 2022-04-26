@@ -72,7 +72,7 @@ const Register = () => {
                                     // todo see above value={pwd}
                                     // todo see above onChange={e => setPwd(e.target.value)}
                                 />
-                                <img style={{position: "absolute", left: 185, height: 30, marginTop: 15}}
+                                <img style={{position: "absolute", left: 365, height: 30, width: 30, marginTop: 15}}
                                     title={isRevealPwd ? "Hide password" : "Show password"}
                                     src={isRevealPwd ? showPwdImg : hidePwdImg}
                                     onClick={() => setIsRevealPwd(prevState => !prevState)}
