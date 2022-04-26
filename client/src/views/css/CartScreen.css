@@ -7,6 +7,11 @@
 .cartscreen h2 {
     margin-bottom: 1rem;
 }
+.proceedButton{
+    background-color:lightyellow;
+    color: lightyellow;
+
+}
 
 .cartscreen_left{
     flex: 0.7;
@@ -19,9 +24,10 @@
 }
 .cartscreen_right{
     flex: 0.3;
-    background: lightblue;
+    background: rgba(217,217,245,1);
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
     height: fit-content;
+    border-radius: 25px;
 }
 
 .cartscreen_right div {
@@ -35,6 +41,12 @@
 
 .cartscreen_info p {
     padding: 8px;
+    font-weight: bold;
+}
+.cartscreen_discount{
+    background-color: lightyellow;
+
+
 }
 
 .cartscreen_right div button {
@@ -42,6 +54,7 @@
     width: 100%;
     background: #171717;
     color: #f4f4f4;
+    font-weight: bold;
     border: 1px solid #171717;
     cursor: pointer;
 }

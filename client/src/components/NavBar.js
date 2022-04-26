@@ -36,9 +36,16 @@ const NavBar = () => {
                                         <span>{" "+quantity+" "}</span>
                                     </Link>
                                 )}
+                                <Nav.Link eventKey={2} href="/#Tracks">
+                                    Tracks
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/#AboutUs">
+                                    About Us
+                                </Nav.Link>
                                 <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto ">
                                     <i className="fas fa-sign-out">Log Out</i>
                                 </Button>
+
                             </>
                         ) : (
                             <>

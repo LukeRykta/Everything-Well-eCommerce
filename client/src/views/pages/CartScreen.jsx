@@ -23,6 +23,7 @@ const CartScreen = () => {
                      </Link>
 
                      <p className="cartitem_price">${product.price * product.quantity}</p>
+
                      <select
                      className="cartitem_select"
                      value={product.quaantity}
@@ -33,22 +34,46 @@ const CartScreen = () => {
                      </select>
 
                      <button className="cartitem_deleteBtn">
-                         <i className="fas fa-trash"></i>
+                         <i style={{textAlign: 'center',
+                             width: "100%"}} className="fas fa-trash"></i>
                      </button>
                  </div>
                  )
              )}
          </div>
          <div className="cartscreen_right">
+             <div className="cartscreen_discount">
+                 <h2>Promo Code</h2>
+                 <span>Total</span>
+
+
+             </div>
+
              <div className="cartscreem_info">
                  <h2>Order Summary</h2>
-                 <span>Total</span>
-                 <span className="move_right">${cart.total.toFixed(2)}</span>
+
+                 <tr>
+                     <th><span>Total</span></th>
+                     <th> <span className="move_right">${cart.total.toFixed(2)}</span></th>
+
+                 </tr>
+                 <tr>
+                     <td><span>Discount</span></td>
+                     <td> <span className="move_right">${cart.total.toFixed(2)}</span></td>
+
+                 </tr>
+
              </div>
+
              <div>
-                 <button>Proceed to Checkout</button>
+                 <button style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>Proceed to Checkout</button>
              </div>
+
+
+
          </div>
+
+
         </div>
     );
 };

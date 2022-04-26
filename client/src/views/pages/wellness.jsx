@@ -24,9 +24,9 @@ const WellPage = () => {
     }
 
     return(
-        <div className="NutritionBackground">
+        <div className="WellnessBackground">
             <div className="container mt-5">
-                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(198,232,114,1'}}>
+                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
                     <h2>Wellness Page</h2>
                     <p className="blockquote">{banner}</p>
                 </div>

@@ -6,22 +6,39 @@
     grid-template-columns: 1fr 4fr 1fr 1fr 1fr;
     gap: 8px;
     background: lightyellow;
-    border-radius: 2px;
+    border-radius: 25px;
     place-items: center;
+    border: 2px solid #6CAF98;
+    font-family: 'Poppins', sans-serif;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+
+}
+span{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 .cartitem_image{
     width: 100px;
     height: 100px;
 }
+.cartitem_price{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
 
 .cartitem_name{
     text-decoration: none;
+    font-weight: bold;
     color: #171717;
+    font-family: 'Poppins', sans-serif;
 }
 
 .cartitem_name:hover {
-    color: #dd219e;
+    color: #D9D9F5;
 }
 
 .cartitem_select {
@@ -29,24 +46,28 @@
 }
 
 .cartitem_deleteBtn {
-    padding: 5px 25px;
-    color: red;
-    background: #f4f4f4;
-    border: 1px solid #171717;
+    width: 80%;
+    color: black;
+    background: #6CAF98;
     cursor: pointer;
     transition: all 0.3s ease-out;
+    border-radius: 25px;
+    place-items: center;
+    border: 2px solid #6CAF98;
 }
 
 .cartitem_deleteBtn:hover,
 .cartitem_deleteBtn:focus,
 .cartitem_deleteBtn:active {
-    background: #171717;
+
     transform: scale(1.2);
 }
 
 @media (max-width: 700px) {
     .cartitem_name{
         font-size: 0.8rem;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
     }
 
     .cartitem_select,
@@ -56,12 +77,16 @@
 
     .cartitem_price {
         font-size: 0.8rem;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
     }
 }
 
 @media (max-width: 500px) {
     .cartitem_name{
         font-size: 0.6rem;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
     }
 
     .cartitem_select,
@@ -71,6 +96,8 @@
 
     .cartitem_price{
         font-size: 0.6rem;
+        font-weight: bold;
+        font-family: 'Poppins', sans-serif;
     }
 }
 
