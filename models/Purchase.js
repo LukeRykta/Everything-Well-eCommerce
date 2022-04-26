@@ -16,7 +16,7 @@ const PurchaseSchema = Schema (
             type: Date,
             default: null
         },
-        cart: { // Cart with a list of items in it. If this is confusing let me know. -pat
+        cart: { // CartTest with a list of items in it. If this is confusing let me know. -pat
             type: [
                 { // Not 100% on if this will work as intended. Intent is store items purchased and have quantity of item be # purchased
                     type: Schema.Types.ObjectId,

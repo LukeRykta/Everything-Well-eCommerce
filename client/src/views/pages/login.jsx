@@ -80,7 +80,7 @@ const LoginPage = () => {
                                     type={isRevealPwd ? "text" : "password"}
                                     placeholder="password"
                                 />
-                                <img style={{position: "absolute", right: 15, marginTop: 15}}
+                                <img style={{position: "absolute", left: 185, height: 30, marginTop: 15}}
                                     title={isRevealPwd ? "Hide password" : "Show password"}
                                     src={isRevealPwd ? showPwdImg : hidePwdImg}
                                     alt="EyeIcon"

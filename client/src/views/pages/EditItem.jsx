@@ -11,7 +11,8 @@ const EditItem = () => {
         image: "",
         price: "",
         quantity: "",
-        track: '',
+        track: "",
+        description: "",
     });
 
     useEffect(() => {
@@ -108,8 +109,8 @@ const EditItem = () => {
                         />
                         <input
                             onChange={handleChange}
-                            value={item.description}
                             name="description"
+                            value={item.description}
                             className="form-control"
                             placeholder="description"
                             type="text"

@@ -17,7 +17,7 @@ import Account from "./views/pages/Account";
 import AuthRoute from "./components/AuthRoute";
 import AdminRoute from "./components/AdminRoute";
 import EditItem from "./views/pages/EditItem";
-import CartPage from "./views/pages/cart";
+import CartPage from "./views/pages/CartScreen";
 
 
 function App () {

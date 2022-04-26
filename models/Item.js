@@ -28,6 +28,7 @@ const ItemSchema = Schema (
         },
         description: { // Item description
             type: String,
+            required: true
         },
         discount: { // Including for possible future use. eg 5 = 5% discount
             type: Number

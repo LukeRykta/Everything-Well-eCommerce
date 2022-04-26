@@ -4,13 +4,13 @@
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
+    padding: 8px;
 }
 
 .navbar button {
-    background-color: white;
+    background: #f4f4f4;
     border: none;
 }
 .color-nav{
     background-color: #6CAF98;
-    ;
 }

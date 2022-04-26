@@ -4,6 +4,7 @@ import ItemCard from "../../components/ItemCard";
 import {Panorama} from "@material-ui/icons";
 import {PageItem} from "react-bootstrap";
 import {forEach} from "react-bootstrap/ElementChildren";
+import {Link} from "react-router-dom";
 
 const NutPage = () => {
     const banner = "This is a test page with item cards that can be reused in other pages. " +

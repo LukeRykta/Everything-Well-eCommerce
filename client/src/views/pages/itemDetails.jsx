@@ -2,12 +2,16 @@ import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import {isAuthenticated} from "../../services/authService";
+import {addProduct} from "../../redux/cartRedux";
+import {useDispatch} from "react-redux";
 
 const ItemDetails = () => {
     const user = isAuthenticated();
     const apiUrl = process.env.REACT_APP_API_URL;
     const [item, setItem] = useState({})
+    const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
+    const dispatch = useDispatch()
 
     useEffect(() => {
         getItem();
@@ -16,6 +20,19 @@ const ItemDetails = () => {
     const getItem = async () => {
         const response = await axios.get(`${apiUrl}/items/item/${id}`);
         setItem(response.data);
+    }
+
+    const handleQuantity = (type) => {
+        if(type === "dec"){
+            quantity > 1 && setQuantity(quantity - 1);
+        } else {
+            setQuantity(quantity + 1);
+        }
+    };
+
+
+    const handleClick = () =>{
+        dispatch(addProduct({...item, quantity}));
     }
 
     return (
@@ -41,10 +58,16 @@ const ItemDetails = () => {
                     )}
                     <div className="card-img-bottom mt-5">
                         { item.quantity <= 0 &&(
-                            <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}>Add to Cart</button>
+                            <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}
+                            >Add to Cart</button>
                         )}
                         { item.quantity > 0 &&(
-                            <button className="btn btn-success mx-1 my-1" style={{backgroundColor: 'rgba(145,181,229,1)'}}>Add to Cart</button>
+                            <button
+                                className="btn btn-success mx-1 my-1"
+                                style={{backgroundColor: 'rgba(145,181,229,1)'}}
+                                onClick={handleClick}>
+                                Add to Cart
+                            </button>
                         )}
                         { user.role === 'ADMIN' &&(
                             <Link to={`/editItem/${item._id}`} style={{ textDecoration: 'none' }}>
