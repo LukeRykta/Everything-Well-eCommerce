@@ -32,13 +32,9 @@ const ItemSchema = Schema (
         discount: { // Including for possible future use. eg 5 = 5% discount
             type: Number
         },
-
         track: {
             type: String,
             required: true
-        },
-        description: {
-            type: String
         },
         dateAdded: { // Date item was added
             type: Date,

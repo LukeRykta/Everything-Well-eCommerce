@@ -31,6 +31,26 @@ authrouter.post("/signup", async (req, res) => {
     }
 })
 
+authrouter.get('/auth/:id', async (req, res) => {
+    const { id } = req.params;
+    const singleUser = await Auth.findById(id);
+    try {
+        return res.status(200).json(singleUser);
+    } catch (error) {
+        return res.status(500).json({message: "Unable to retrieve the user"})
+    }
+})
+
+authrouter.put('/auth/:id', async (req, res) => {
+    const { id } = req.params;
+    const userToUpdate = await Auth.findByIdAndUpdate(id, req.body, {new: true});
+    try {
+        return res.status(202).json(userToUpdate);
+    } catch (error) {
+        return res.status(500).json({message: "Unable to update the user"})
+    }
+})
+
 authrouter.post("/login", async (req, res) => {
     const {email, password} = req.body;
     const user = await Auth.findOne({email});
@@ -43,6 +63,16 @@ authrouter.post("/login", async (req, res) => {
     }
     const token = await generateJwt(user._id);
     return res.status(200).json({token: token, user: user});
+})
+
+authrouter.delete("/auth/:id", async (req, res) => {
+    const { id } = req.params;
+    await Auth.findByIdAndDelete(id)
+    try {
+        return res.status(203).json({message: "Successfully deleted the user"});
+    } catch (error) {
+        return res.status(500).json({message: "Unable to delete the user"})
+    }
 })
 
 module.exports = authrouter;

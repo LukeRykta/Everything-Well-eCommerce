@@ -6,7 +6,6 @@ import cartImage from "../views/assets/icons8-buying-30.png";
 
 const NavBar = () => {
     const user = isAuthenticated();
-    console.log("HERE",user.role === 'ADMIN');
 
     return (
         <Navbar collapseOnSelect expand="sm"  variant="dark" className="color-nav">
@@ -31,15 +30,11 @@ const NavBar = () => {
                             <>
                                 { user.role === 'USER' && (
                                     <Nav.Link href="/cart" className="mx-2">
-                                        <img style={{width: "1.4rem", height: "1.4rem"}} src={cartImage} alt="Cart Image"/>
+                                        <img style={{width: "1.4rem", height: "1.4rem"}} src={cartImage} alt="Cart"/>
                                     </Nav.Link>
                                 )}
-                                <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
-                            </>
-                        ) : (
-                            <>
-                                <Nav.Link href="/login">
-                                    Login 
+                                <Nav.Link href="/account" className="mx-2">
+                                     Account
                                 </Nav.Link>
                                 <Nav.Link eventKey={2} href="/register">
                                     Register
@@ -47,8 +42,21 @@ const NavBar = () => {
                                 <Nav.Link eventKey={2} href="/#Tracks">
                                     Tracks
                                 </Nav.Link>
+                                <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto">Log Out</Button>
+                            </>
+                        ) : (
+                            <>
+                                <Nav.Link href="/login">
+                                    Login 
+                                </Nav.Link>
                                 <Nav.Link eventKey={2} href="/#AboutUs">
                                     About Us
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/register">
+                                    Register
+                                </Nav.Link>
+                                <Nav.Link eventKey={2} href="/#Tracks">
+                                    Tracks
                                 </Nav.Link>
                             </>
                             )

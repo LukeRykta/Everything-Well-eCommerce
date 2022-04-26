@@ -47,7 +47,7 @@ const EditItem = () => {
         const choice = window.confirm("Are you sure you want to delete this item?");
         if (!choice)
             return;
-        deleteItem(id)
+        await deleteItem(id)
         navigate("/");
         window.location.reload();
     }
@@ -103,7 +103,7 @@ const EditItem = () => {
                             name="track"
                             value={item.track}
                             className="form-control"
-                            placeholder="track"
+                            placeholder="track  (nutrition / wellness / fitness)"
                             type="text"
                         />
                         <input

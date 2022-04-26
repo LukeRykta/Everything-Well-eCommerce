@@ -51,9 +51,9 @@ const MainPage = () => {
             <br />
             <div className="container-fluid text-center">
             <ul>
-                <li><img src={require("../../views/assets/nutrition.png")}/><a href="./nutrition" className="TrackName">Nutrition</a></li>
-                <li><img src={require("../../views/assets/wellness.png")}/><a href="./wellness" className="TrackName">Wellness</a></li>
-                <li><img src={require("../../views/assets/fitness.png")}/><a href="./fitness" className="TrackName">Fitness</a></li>
+                <li><img src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
+                <li><img src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
+                <li><img src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
                
             </ul>
             </div>   
@@ -69,41 +69,32 @@ const MainPage = () => {
                 <p>At Everything Well, our goal is to help you reach your full potential! In order to do this we have created three
                     tracks for you to choose from: <b>Nutrition, Wellness, & Fitness.</b> Under each track you will find products to buy
                     to further your journey. Whether it be working out more, having more meditation time, or even eating cleaner,
-                    you will find what you need here. 
-
+                    you will find what you need here.
                 </p>
                 <br />
                 <br />
                 <br />
-
             </div>
         </div>
 
-
-            
-            
-            
-
-
-       
-  <div class="row">
-    	<div class="col-md-12">
-    	    <footer class="footer">				
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3 m-b-30">
-					<div class="footer-title m-t-5 m-b-20 p-b-8">
+  <div className="row">
+    	<div className="col-md-12">
+    	    <footer className="footer">
+		<div className="container">
+			<div className="row">
+				<div className="col-md-3 m-b-30">
+					<div className="footer-title m-t-5 m-b-20 p-b-8">
 						About us
-					</div>	
-					<p class="white-text">
+					</div>
+					<p className="white-text">
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500 text of the printing.
 					</p>
 				</div>
-				<div class="col-md-3 m-b-30">
-					<div class="footer-title m-t-5 m-b-20 p-b-8">
+				<div className="col-md-3 m-b-30">
+					<div className="footer-title m-t-5 m-b-20 p-b-8">
 						Latest themes
-					</div>	
-					<div class="footer-links">
+					</div>
+					<div className="footer-links">
 						<a href="#">
 							Appointment
 						</a>
@@ -118,11 +109,11 @@ const MainPage = () => {
 						</a>
 					</div>
 				</div>
-				<div class="col-md-3 m-b-30">
-					<div class="footer-title m-t-5 m-b-20 p-b-8">
+				<div className="col-md-3 m-b-30">
+					<div className="footer-title m-t-5 m-b-20 p-b-8">
 						Quick Links
-					</div>	
-					<div class="footer-links">
+					</div>
+					<div className="footer-links">
 						<a href="#">
 							Blog
 						</a>
@@ -137,11 +128,11 @@ const MainPage = () => {
 						</a>
 					</div>
 				</div>
-				<div class="col-md-3 m-b-30">
-					<div class="footer-title m-t-5 m-b-20 p-b-8">
+				<div className="col-md-3 m-b-30">
+					<div className="footer-title m-t-5 m-b-20 p-b-8">
 						Support
-					</div>	
-					<div class="footer-links">
+					</div>
+					<div className="footer-links">
 						<a href="#">
 							Affiliate
 						</a>
@@ -156,49 +147,36 @@ const MainPage = () => {
 						</a>
 					</div>
 
-					<div class="footer-social-links m-t-30">
+					<div className="footer-social-links m-t-30">
 						<li>
 							<a href="#">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<i className="fa fa-facebook" aria-hidden="true"></i>
 							</a>
 							<a href="#">
-								<i class="fa fa-twitter" aria-hidden="true"></i>
+								<i className="fa fa-twitter" aria-hidden="true"></i>
 							</a>
 							<a href="#">
-								<i class="fa fa-linkedin" aria-hidden="true"></i>
+								<i className="fa fa-linkedin" aria-hidden="true"></i>
 							</a>
 							<a href="#">
-								<i class="fa fa-youtube" aria-hidden="true"></i>
+								<i className="fa fa-youtube" aria-hidden="true"></i>
 							</a>
                             <FontAwesomeIcon icon={faFacebook} size="4x" className="icon" beat/>
-                <FontAwesomeIcon icon={faTwitter} size="4x" className="icon" beat/>
-                <FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>
+                			<FontAwesomeIcon icon={faTwitter} size="4x" className="icon" beat/>
+                			<FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>
 						</li>
 					</div>
 				</div>
 			</div>
 		</div>
-        
-                
-              
-               
-               
 
-                
-
-                
-    
 	</footer>
-	<div class="footer-bottom">
+	<div className="footer-bottom">
 		Copyright © 2022 Group 11, All Rights Reserved
 	</div>
     	</div>
 	</div>
 
-        
-
-        
-            
         </div>
     );
 }

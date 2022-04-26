@@ -13,6 +13,7 @@ import ItemDetails from "./views/pages/itemDetails";
 import NavBar from "./components/NavBar";
 import AddItem from "./views/pages/addItem";
 import Register from "./views/pages/register";
+import Account from "./views/pages/Account";
 import AuthRoute from "./components/AuthRoute";
 import AdminRoute from "./components/AdminRoute";
 import EditItem from "./views/pages/EditItem";
@@ -29,11 +30,12 @@ function App () {
                 <Route element={<AdminRoute/>}>
                     <Route path="/addItem" element={<AddItem />} /> //page to create new item
                 </Route>
-                    <Route element={<AuthRoute />}> //Contains routes to protected pages (admin)
+                    <Route element={<AuthRoute />}> //Contains routes to protected pages
                 </Route>
                 <Route path="*" element={<NotFoundPage />} /> //default 404 page
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/account" element={<Account />} />
                 <Route path="/cart" element={<CartPage />} />
                 <Route path="/editItem/:id" element={<EditItem/>} />
                 <Route path="/todo" element={<ListTest />} />

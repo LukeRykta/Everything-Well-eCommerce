@@ -4,6 +4,8 @@ import './views/css/Index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Provider } from "react-redux";
+import store from "./redux/store"
 
 /**
  The function below is the root of our React front-end. the render function is constantly refreshing <App/>
@@ -12,9 +14,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
  and management. -Luke
  */
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+    </Provider>,
   document.getElementById('root')
 );
 

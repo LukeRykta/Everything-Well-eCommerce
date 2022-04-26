@@ -17,6 +17,6 @@ export const editItem = async (itemObj, id) => {
     await axios.put(`${apiUrl}/items/item/${id}`, itemObj);
 }
 
-export const deleteItem = (id) => {
-    axios.delete(`${apiUrl}/items/item/${id}`);
+export const deleteItem = async (id) => {
+    await axios.delete(`${apiUrl}/items/item/${id}`);
 }
