@@ -4,8 +4,12 @@ import axios from "axios";
 import {isAuthenticated} from "../../services/authService";
 import {addProduct} from "../../redux/cartRedux";
 import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
+
+
 
 const ItemDetails = () => {
+
     const user = isAuthenticated();
     const apiUrl = process.env.REACT_APP_API_URL;
     const [item, setItem] = useState({})
@@ -21,6 +25,7 @@ const ItemDetails = () => {
         const response = await axios.get(`${apiUrl}/items/item/${id}`);
         setItem(response.data);
     }
+    const navigate = useNavigate();
 
     const handleQuantity = (type) => {
         if(type === "dec"){
@@ -31,9 +36,11 @@ const ItemDetails = () => {
     };
 
 
+
     const handleClick = () =>{
         dispatch(addProduct({...item, quantity}));
     }
+
 
     return (
         <div className="form container mt-3" style={{maxWidth: '1200px', margin: '0 auto', padding: '15px', display: 'flex'}}>
@@ -75,8 +82,9 @@ const ItemDetails = () => {
                             </Link>
                         )}
                         <Link to="/nutrition" style={{ textDecoration: 'none' }}>
-                            <button className="btn btn-secondary mx-1 my-1">Return</button>
+                            <button onClick={() => navigate(-1)} className="btn btn-secondary mx-1 my-1">Return</button>
                         </Link>
+
                     </div>
 
                 </div>

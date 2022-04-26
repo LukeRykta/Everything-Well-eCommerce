@@ -4,7 +4,9 @@ import "./NavBar.css"
 import {isAuthenticated, logOut} from "../services/authService";
 import {useSelector} from "react-redux";
 
+
 const NavBar = () => {
+
     const quantity = useSelector(state => state.cart.quantity)
 
     const user = isAuthenticated();
