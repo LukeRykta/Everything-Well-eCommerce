@@ -17,7 +17,7 @@ const MainPage = () => {
             <div className="TestBackground">
             
             <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "40%"}} >
-                <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
+                <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page,<br></br> </span>{name}</h1>
             </div>
 
             <div 
@@ -26,9 +26,9 @@ const MainPage = () => {
                 justifyContent: 'center',
                 alignItems: "center",
                 lineHeight:"100px",
-                width: "97%",
+                width: "100%",
             }} className="container-fluid MainHeading flex-column">Disover Your Life<br /> And Do it Well</div>
-            <div style= {{width: "97%"}} className="container-fluid SubMainHeading ">Take control of your life</div>
+            <div style= {{width: "100%"}} className="container-fluid SubMainHeading ">Take control of your life</div>
 
         </div>
           
@@ -51,10 +51,18 @@ const MainPage = () => {
             <br />
             <div className="container-fluid text-center">
             <ul>
-                <li><img src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
-                <li><img src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
-                <li><img src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
-               
+                <li>
+					<a href="/nutrition"><img src={require("../../views/assets/nutrition.png")}/></a>
+					<a href="/nutrition" className="TrackName">Nutrition</a>
+				</li>
+                <li>
+					<a href="/wellness"><img src={require("../../views/assets/wellness.png")}/></a>
+					<a href="/wellness" className="TrackName">Wellness</a>
+				</li>
+                <li>
+					<a href="/fitness"><img src={require("../../views/assets/fitness.png")}/></a>
+					<a href="/fitness" className="TrackName">Fitness</a>
+				</li>
             </ul>
             </div>   
             <br />
@@ -87,12 +95,15 @@ const MainPage = () => {
 						About us
 					</div>
 					<p className="white-text">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500 text of the printing.
+					At Everything Well, our goal is to help you reach your full potential! In order to do this we have created three
+                    tracks for you to choose from: <b>Nutrition, Wellness, & Fitness.</b> Under each track you will find products to buy
+                    to further your journey. Whether it be working out more, having more meditation time, or even eating cleaner,
+                    you will find what you need here.
 					</p>
 				</div>
 				<div className="col-md-3 m-b-30">
 					<div className="footer-title m-t-5 m-b-20 p-b-8">
-						Latest themes
+						Resources
 					</div>
 					<div className="footer-links">
 						<a href="#">
@@ -103,9 +114,6 @@ const MainPage = () => {
 						</a>
 						<a href="#">
 							Quality
-						</a>
-						<a href="#">
-							Wallstreet
 						</a>
 					</div>
 				</div>
@@ -134,37 +142,23 @@ const MainPage = () => {
 					</div>
 					<div className="footer-links">
 						<a href="#">
-							Affiliate
+							Affiliates
 						</a>
 						<a href="#">
 							Login
 						</a>
 						<a href="#">
-							All theme package
-						</a>
-						<a href="#">
 							Support forum
 						</a>
 					</div>
-
-					<div className="footer-social-links m-t-30">
-						<li>
-							<a href="#">
-								<i className="fa fa-facebook" aria-hidden="true"></i>
-							</a>
-							<a href="#">
-								<i className="fa fa-twitter" aria-hidden="true"></i>
-							</a>
-							<a href="#">
-								<i className="fa fa-linkedin" aria-hidden="true"></i>
-							</a>
-							<a href="#">
-								<i className="fa fa-youtube" aria-hidden="true"></i>
-							</a>
-                            <FontAwesomeIcon icon={faFacebook} size="4x" className="icon" beat/>
-                			<FontAwesomeIcon icon={faTwitter} size="4x" className="icon" beat/>
-                			<FontAwesomeIcon icon={faInstagram} size="4x" className="icon" beat/>
-						</li>
+				</div>
+				<div className="col-md-12">
+					<div className="footer-social-links">
+							<ul>
+								<li><FontAwesomeIcon icon={faFacebook} size="2x" className="icon" beat/></li>
+								<li><FontAwesomeIcon icon={faTwitter} size="2x" className="icon" beat/></li>
+								<li><FontAwesomeIcon icon={faInstagram} size="2x" className="icon" beat/></li>
+							</ul>
 					</div>
 				</div>
 			</div>

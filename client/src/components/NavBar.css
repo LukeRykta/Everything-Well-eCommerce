@@ -1,9 +1,9 @@
 .navbar a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    font-size: large;
     padding: 8px;
 }
 
