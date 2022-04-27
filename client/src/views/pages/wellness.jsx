@@ -25,10 +25,10 @@ const WellPage = () => {
         <div className="WellnessBackground">
             <div>
                 <div className="py-4" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
-                    <div className style={{position: "absolute", left: "8%"}}>
-                        <h2><span style={{color: "#ffffff"}}>Wellness</span></h2>
-                    </div>
                     <div className="text-center">
+                        <div className style={{position: "relative"}}>
+                            <h2><span style={{fontWeight: "lighter" ,color: "white"}}>Wellness</span></h2>
+                        </div>
                         <label style={{width: "67%"}}>
                             <input
                                 className="form-control"

@@ -25,10 +25,10 @@ const FitPage = () => {
         <div className="FitnessBackground">
             <div>
                 <div className="py-4" style={{backgroundColor: 'rgba(255,131,100,1)'}}>
-                    <div style={{position: "absolute", left: "10%"}}>
-                        <h2>Fitness</h2>
-                    </div>
                     <div className="text-center">
+                        <div className style={{position: "relative"}}>
+                            <h2>Fitness</h2>
+                        </div>
                         <label style={{width: "67%"}}>
                             <input
                                 className="form-control"

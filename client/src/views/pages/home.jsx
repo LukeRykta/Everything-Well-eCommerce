@@ -15,11 +15,13 @@ const MainPage = () => {
         <div>
             <div className="TestBackground">
 
-            	<div className="mt-5 text-center h1 container-fluid" style={{width: "40%"}} >
+            	<div className="mt-5 text-center h1 container-fluid" style={{width: "60%"}} >
             	    <h1>
-						<span style={{color: "#ffffff"}}>
-							Welcome to the Home Page,<br/>
-						</span>{name}
+						<span style={{color: "#ffffff", fontSize: "3vw"}}>
+							Welcome to the Home Page, </span>
+						<span style={{fontSize: "3vw"}}>
+							{name}
+						</span>
 					</h1>
             	</div>
 

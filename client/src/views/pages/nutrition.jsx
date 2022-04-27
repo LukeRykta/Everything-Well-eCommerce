@@ -25,10 +25,10 @@ const NutPage = () => {
         <div className="NutritionBackground">
             <div>
                 <div className="py-4" style={{backgroundColor: 'rgba(198,232,114,1'}}>
-                    <div className style={{position: "absolute", left: "8%"}}>
-                        <h2>Nutrition</h2>
-                    </div>
                     <div className="text-center">
+                        <div className style={{position: "relative"}}>
+                        <h2>Nutrition</h2>
+                        </div>
                         <label style={{width: "67%"}}>
                             <input
                                 className="form-control"
