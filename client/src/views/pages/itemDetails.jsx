@@ -47,8 +47,7 @@ const ItemDetails = () => {
             <div className="itemLeftColumn" style={{width: '65%', position: 'relative'}}>
                 <img style={{width: "75%"}} src={item.image} alt="image not found :/"/>
             </div>
-            <div className="itemRightColumn" style={{width: '35%',
-                marginTop: '60px'}}>
+            <div className="itemRightColumn" style={{width: '35%', marginTop: '60px'}}>
                 <div className="product-description" style={{borderBottom: '1px solid #E1E8EE', marginTop: '20px'}}>
                     <span style={{fontSize: '25px', color:'rgba(145,181,229,1)', letterSpacing: '1px', textTransform: 'uppercase', textDecoration: 'none', fontWeight: 'bold'}}>{item.title}</span>
                     <h1 style={{fontSize: '20px'}}>${item.price}</h1>
@@ -60,7 +59,7 @@ const ItemDetails = () => {
                     {item.quantity > 0 &&(
                         <h4 className="mt-5"><span style={{color: "rgba(145,181,229,1)"}}></span> in stock
                             <p><Add  onClick={() => handleQuantity("inc")} />
-                                {quantity+"  "}
+                                {quantity+ " "}
                             <Remove  onClick={() => handleQuantity("dec")} /></p>
                         </h4>
                         )}
@@ -71,8 +70,9 @@ const ItemDetails = () => {
 
                     <div className="card-img-bottom mt-5">
                         { item.quantity <= 0 &&(
-                            <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}
-                            >Add to Cart</button>
+                            <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}>
+                                Add to Cart
+                            </button>
                         )}
                         { item.quantity > 0 &&(
                             <button
@@ -90,15 +90,10 @@ const ItemDetails = () => {
                         <Link to="/nutrition" style={{ textDecoration: 'none' }}>
                             <button onClick={() => navigate(-1)} className="btn btn-secondary mx-1 my-1">Return</button>
                         </Link>
-
                     </div>
-
                 </div>
-
             </div>
         </div>
-
-
     )
 }
 

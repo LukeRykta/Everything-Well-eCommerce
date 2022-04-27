@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins&display=swap');
+
 .Todo {
   text-align: center;
   font-size: calc(10px + 2vmin);
@@ -64,8 +67,6 @@ button {
 
 button:focus {
   outline: white;
-  
- 
 }
 
 ul {
@@ -73,11 +74,9 @@ ul {
  
 }
 
-
 li {
   text-align: center;
   display: inline-block;
-  padding-bottom: 20px;
   padding: 50px;
 }
 
@@ -171,7 +170,7 @@ a{
   background-color: #94D3BD;
   
 }
-@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Poppins&display=swap');
+
 .MainHeading{
   text-align: center;
   font-size: 6.5vw;

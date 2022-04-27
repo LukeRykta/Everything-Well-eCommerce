@@ -1,15 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { getAllItems } from "../../services/itemService"
 import ItemCard from "../../components/ItemCard";
-import {Panorama} from "@material-ui/icons";
-import {PageItem} from "react-bootstrap";
-import {forEach} from "react-bootstrap/ElementChildren";
-import {Link} from "react-router-dom";
 
 const NutPage = () => {
-    const banner = "This is a test page with item cards that can be reused in other pages. " +
-                   "Each card has a btn that redirects to the itemDetails screen which imports " +
-                   "the parameters we use for each unique item.";
     const [items, setItems] = useState([]);
     const relevant_tracks = [];
 
@@ -30,13 +23,22 @@ const NutPage = () => {
 
     return(
         <div className="NutritionBackground">
-            <div className="container mt-5">
-                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(198,232,114,1'}}>
-                    <h2>Nutrition Page</h2>
-                    <p className="blockquote">{banner}</p>
+            <div>
+                <div className="py-4" style={{backgroundColor: 'rgba(198,232,114,1'}}>
+                    <div className style={{position: "absolute", left: "8%"}}>
+                        <h2>Nutrition</h2>
+                    </div>
+                    <div className="text-center">
+                        <label style={{width: "67%"}}>
+                            <input
+                                className="form-control"
+                                placeholder="search"
+                            />
+                        </label>
+                    </div>
                 </div>
                 <div className="container">
-                    <div className="row">
+                    <div className="row mt-3">
                         {relevant_tracks.map((item) => (
                             <div key={item._id} className="px-5 my-3 col-lg-4 col-md-6 col-sm-12">
                                 <ItemCard obj={item} />

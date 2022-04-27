@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
 import {getAllItems} from "../../services/itemService";
 import ItemCard from "../../components/ItemCard";
 
 const WellPage = () => {
-    const banner = "Welcome to the Wellness Page";
     const [items, setItems] = useState([]);
     const relevant_tracks = [];
 
@@ -25,13 +23,22 @@ const WellPage = () => {
 
     return(
         <div className="WellnessBackground">
-            <div className="container mt-5">
-                <div className="px-5 py-2 form-label itemCard" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
-                    <h2>Wellness Page</h2>
-                    <p className="blockquote">{banner}</p>
+            <div>
+                <div className="py-4" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
+                    <div className style={{position: "absolute", left: "8%"}}>
+                        <h2>Wellness</h2>
+                    </div>
+                    <div className="text-center">
+                        <label style={{width: "67%"}}>
+                            <input
+                                className="form-control"
+                                placeholder="search"
+                            />
+                        </label>
+                    </div>
                 </div>
                 <div className="container">
-                    <div className="row">
+                    <div className="row mt-3">
                         {relevant_tracks.map((item) => (
                             <div key={item._id} className="px-5 my-3 col-lg-4 col-md-6 col-sm-12">
                                 <ItemCard obj={item} />
