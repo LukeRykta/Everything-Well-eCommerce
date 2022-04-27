@@ -18,7 +18,7 @@ const CartScreen = () => {
                               alt="product name"/>
                      </div>
 
-                     <Link to ={`/product/${111}`} className="cartitem_name">
+                     <Link to ={`/item/${product._id}`} className="cartitem_name">
                          <p>{product.title}</p>
                      </Link>
 
