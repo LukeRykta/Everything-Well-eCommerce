@@ -16,7 +16,7 @@ const MainPage = () => {
         <div>
             <div className="TestBackground">
             
-            <div className="mt-5 text-center h1 itemCard container-fluid" style={{width: "40%"}} >
+            <div className="mt-5 text-center h1 container-fluid"  >
                 <h1><span style={{color: "#ffffff"}}>Welcome to the Home Page, </span>{name}</h1>
             </div>
 
@@ -51,9 +51,9 @@ const MainPage = () => {
             <br />
             <div className="container-fluid text-center">
             <ul>
-                <li><img src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
-                <li><img src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
-                <li><img src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
+                <li><img alt={"nut"} src={require("../../views/assets/nutrition.png")}/><a href="/nutrition" className="TrackName">Nutrition</a></li>
+                <li><img alt={"well"} src={require("../../views/assets/wellness.png")}/><a href="/wellness" className="TrackName">Wellness</a></li>
+                <li><img alt={"fit"} src={require("../../views/assets/fitness.png")}/><a href="/fitness" className="TrackName">Fitness</a></li>
                
             </ul>
             </div>   
