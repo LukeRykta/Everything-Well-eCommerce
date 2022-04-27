@@ -5,6 +5,7 @@ import {isAuthenticated} from "../../services/authService";
 import {addProduct} from "../../redux/cartRedux";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
+import {Add, Remove} from "@material-ui/icons";
 
 
 
@@ -36,7 +37,6 @@ const ItemDetails = () => {
     };
 
 
-
     const handleClick = () =>{
         dispatch(addProduct({...item, quantity}));
     }
@@ -58,11 +58,17 @@ const ItemDetails = () => {
                             <h4 className="" style={{color: 'red'}}>Out of Stock</h4>
                         )}
                     {item.quantity > 0 &&(
-                        <h4 className="mt-5"><span style={{color: "rgba(145,181,229,1)"}}>{item.quantity}</span> in stock</h4>
+                        <h4 className="mt-5"><span style={{color: "rgba(145,181,229,1)"}}></span> in stock
+                            <p><Add  onClick={() => handleQuantity("inc")} />
+                                {quantity+"  "}
+                            <Remove  onClick={() => handleQuantity("dec")} /></p>
+                        </h4>
                         )}
                     { item.quantity == null &&(
                         <h4 className="mt-5" style={{color: "darkgray"}}>This item is no longer available.</h4>
                     )}
+
+
                     <div className="card-img-bottom mt-5">
                         { item.quantity <= 0 &&(
                             <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}

@@ -13,6 +13,13 @@
 
 }
 
+.cartscreen_select {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
 .cartscreen_left{
     flex: 0.7;
     margin-right: 1rem;

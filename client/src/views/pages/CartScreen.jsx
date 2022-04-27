@@ -2,10 +2,14 @@ import "../css/CartScreen.css";
 import CartItem from "./CartItem";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+import { toRemove} from "../../redux/cartRedux";
+import {useDispatch} from "react-redux";
 
 
 const CartScreen = () => {
     const cart = useSelector(state => state.cart)
+    const dispatch = useDispatch()
+
 
     return (
         <div className="cartscreen">
@@ -22,18 +26,10 @@ const CartScreen = () => {
                          <p>{product.title}</p>
                      </Link>
 
-                     <p className="cartitem_price">${product.price * product.quantity}</p>
+                     <p className="cartitem_price">${(product.price * product.quantity).toFixed(2)}</p>
+                     <p className="cartitem_price">{product.quantity}</p>
 
-                     <select
-                     className="cartitem_select"
-                     value={product.quantity}
-                     onChange={() => console.log('something')}>
-                         {[...Array(product.quantity).keys()].map(x =>(
-                             <option key={x+1} value={x+1}> {x+1}</option>
-                         ))}
-                     </select>
-
-                     <button className="cartitem_deleteBtn">
+                     <button onClick={() => dispatch(toRemove(product,product.id))} className="cartitem_deleteBtn">
                          <i style={{textAlign: 'center',
                              width: "100%"}} className="fas fa-trash"></i>
                      </button>
@@ -44,7 +40,14 @@ const CartScreen = () => {
          <div className="cartscreen_right">
              <div className="cartscreen_discount">
                  <h2>Promo Code</h2>
-                 <span>Total</span>
+                 <input
+
+                     name="promo code"
+
+                     className="form-control mt-4"
+                     placeholder="Enter Promo Code"
+                     type="text"
+                 />
 
 
              </div>
@@ -53,15 +56,24 @@ const CartScreen = () => {
                  <h2>Order Summary</h2>
 
                  <tr>
-                     <th><span>Total</span></th>
+                     <th><span>SubTotal</span></th>
                      <th> <span className="move_right">${cart.total.toFixed(2)}</span></th>
 
                  </tr>
+
                  <tr>
-                     <td><span>Discount</span></td>
-                     <td> <span className="move_right">${cart.total.toFixed(2)}</span></td>
+                     <td><span>Shipping</span></td>
+                     <td> <span className="move_right">${5.99}</span></td>
 
                  </tr>
+
+
+                 <tr>
+                     <th><span>Total</span></th>
+                     <th> <span className="move_right">${(cart.total+Number(5.99)).toFixed(2)}</span></th>
+
+                 </tr>
+
 
              </div>
 
