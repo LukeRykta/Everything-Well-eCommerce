@@ -67,11 +67,17 @@ const CartScreen = () => {
 
                  </tr>
 
+                 <tr>
+                     <td><span>Tax</span></td>
+                     <td> <span className="move_right">${(cart.total *.0825).toFixed(2)}</span></td>
+
+                 </tr>
+
+
 
                  <tr>
                      <th><span>Total</span></th>
-                     <th> <span className="move_right">${(cart.total+Number(5.99)).toFixed(2)}</span></th>
-
+                     <th><span className="move_right">${(cart.total+Number(5.99)+(cart.total *.0825)).toFixed(2)}</span></th>
                  </tr>
 
 
