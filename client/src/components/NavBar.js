@@ -45,7 +45,7 @@ const NavBar = () => {
                                     About Us
                                 </Nav.Link>
                                 <Button onClick={logOut} className="btn btn-outline-secondary w-auto h-auto ">
-                                    <i className="fas fa-sign-out">Log Out</i>
+                                    <i className="fas fa-sign-out"></i>
                                 </Button>
 
                             </>

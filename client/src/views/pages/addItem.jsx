@@ -43,8 +43,7 @@ const AddItem = () => {
 
     return (
         <div className="FitBackground">
-            <div style={{paddingTop: "5%"}}>
-            <div className="container mt-5">
+            <div style={{paddingTop: "2%"}}>
                 <form className="form mt-5 bg-light shadow-lg border-3">
                     <h2 className="text-center">Create New Item</h2>
                     <Row>
@@ -114,7 +113,6 @@ const AddItem = () => {
                         </button>
                     </Row>
                 </form>
-            </div>
             </div>
         </div>
     )

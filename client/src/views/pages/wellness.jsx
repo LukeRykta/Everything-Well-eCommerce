@@ -26,7 +26,7 @@ const WellPage = () => {
             <div>
                 <div className="py-4" style={{backgroundColor: 'rgba(119,82,158,1)'}}>
                     <div className style={{position: "absolute", left: "8%"}}>
-                        <h2>Wellness</h2>
+                        <h2><span style={{color: "#ffffff"}}>Wellness</span></h2>
                     </div>
                     <div className="text-center">
                         <label style={{width: "67%"}}>
