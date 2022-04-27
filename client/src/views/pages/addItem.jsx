@@ -16,6 +16,7 @@ const AddItem = () => {
         description: '',
     });
 
+
     const handleChange = (event) => {
         setItem({
             ...item,
@@ -27,10 +28,10 @@ const AddItem = () => {
         event.preventDefault();
         console.log(item);
         await createItem(item);
-        navigate('/nutrition')
+        navigate("/"+item.track)
         setItem({
             title: '',
-            author: '', //where is this from? - 
+            vendor: '', //where is this from? -
             image: '',
             price: '',
             quantity: '',
@@ -99,7 +100,7 @@ const AddItem = () => {
                         />
                         <input
                             onChange={handleChange}
-                            name="track"
+                            name="description"
                             value={item.description}
                             className="form-control"
                             placeholder="item description"

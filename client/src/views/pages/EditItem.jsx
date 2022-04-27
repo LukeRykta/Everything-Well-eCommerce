@@ -40,7 +40,7 @@ const EditItem = () => {
             track: '',
             description: '',
         });
-        navigate("/")
+        navigate("/"+item.track)
     }
 
     const handleDelete = async (event) => {
@@ -49,7 +49,7 @@ const EditItem = () => {
         if (!choice)
             return;
         await deleteItem(id)
-        navigate("/");
+        navigate("/"+item.track);
         window.location.reload();
     }
 

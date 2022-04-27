@@ -26,7 +26,7 @@ const CartScreen = () => {
 
                      <select
                      className="cartitem_select"
-                     value={product.quaantity}
+                     value={product.quantity}
                      onChange={() => console.log('something')}>
                          {[...Array(product.quantity).keys()].map(x =>(
                              <option key={x+1} value={x+1}> {x+1}</option>
