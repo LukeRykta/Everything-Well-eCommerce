@@ -72,7 +72,7 @@ const ItemDetails = () => {
                     <div className="mt-5">
                         { item.quantity <= 0 &&(
                             <button disabled className="btn btn-success mx-1 my-1" style={{fontWeight: 'bold'}}>
-                                Add to Cart
+                                Out of Stock
                             </button>
                         )}
                         { item.quantity > 0 &&(

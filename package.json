@@ -35,7 +35,8 @@
     "font-awesome": "^4.7.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.2.11",
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "react-stripe-checkout": "^2.6.3"
   },
   "devDependencies": {
     "concurrently": "^7.1.0",

@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const Checkout = () => {
+
     return(
             <div className="WellnessBackground">
                 <div style={{paddingTop: "10%", paddingBottom: "200%"}}>
