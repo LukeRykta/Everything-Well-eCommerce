@@ -56,7 +56,7 @@ const CartScreen = () => {
                  <h2>Order Summary</h2>
 
                  <tr>
-                     <th><span>SubTotal</span></th>
+                     <th><span>Subtotal</span></th>
                      <th> <span className="move_right">${cart.total.toFixed(2)}</span></th>
 
                  </tr>
@@ -84,7 +84,7 @@ const CartScreen = () => {
              </div>
 
              <div>
-                 <button style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>Proceed to Checkout</button>
+             <button style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}><Link to="/Checkout"><p style={{color: "whitesmoke"}}>Checkout</p></Link></button>
              </div>
 
 

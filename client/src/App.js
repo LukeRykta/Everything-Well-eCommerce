@@ -18,6 +18,7 @@ import AuthRoute from "./components/AuthRoute";
 import AdminRoute from "./components/AdminRoute";
 import EditItem from "./views/pages/EditItem";
 import CartPage from "./views/pages/CartScreen";
+import Checkout from "./views/pages/Checkout";
 
 
 function App () {
@@ -44,6 +45,7 @@ function App () {
                 <Route path="/nutrition" element={<NutPage />} />
                 <Route path="/itemDetails" element={<ItemDetails />} /> //detail page for item that is clicked on
                 <Route path="/item/:id" element={<ItemDetails />} />
+                <Route path="/checkout" element={<Checkout />} />
             </Routes>
         </BrowserRouter>
     );
