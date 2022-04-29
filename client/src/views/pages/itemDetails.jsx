@@ -54,7 +54,7 @@ const ItemDetails = () => {
                             )}
                         {item.quantity > 0 &&(
                             <h4 className="mt-5"><span style={{color: "rgba(145,181,229,1)"}}>{item.quantity}</span> in stock<br/><br/>
-                                <p className="itemCard text-center" style={{width: "25%"}}>
+                                <p className="itemCard text-center" style={{width: "30%"}}>
                                     <Add style={{color: "green"}} onClick={() => handleQuantity("inc")} />
                                     {" " + quantity + " "}
                                     <Remove style={{color: "red"}} onClick={() => handleQuantity("dec")} />

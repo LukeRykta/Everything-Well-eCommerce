@@ -3,7 +3,7 @@ import "../css/CartItem.css";
 import "../css/resizeImage.css";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import { toRemove} from "../../redux/cartRedux";
+import { toRemove, toRemoveAll} from "../../redux/cartRedux";
 import {useDispatch} from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import {useState} from "react";
@@ -13,11 +13,13 @@ import {useState} from "react";
 const CartScreen = () => {
     const KEY = process.env.REACT_APP_STRIPE;
     const cart = useSelector(state => state.cart)
-    const [stripeToken, setStripeToken] = useState(null);
+    const [stripeToken, setStripeToken] = useState(null)
     const dispatch = useDispatch()
     const shipping = "1.99"
     const free = "0.00"
     const finalTotal = (cart.total+Number(cart.total === 0 ? free : shipping)+(cart.total *.0825)).toFixed(2);
+
+
     const onToken = (token) => {
         setStripeToken(token);
     };
@@ -106,8 +108,9 @@ const CartScreen = () => {
                      token={onToken}
                      stripeKey={KEY}
                  >
-                    <button style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>
-                        <Link to='/checkout'><i style={{color: "whitesmoke" , textDecoration: "none"}}>
+                    <button onClick={() => dispatch(toRemoveAll(cart.products))} style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>
+                        <Link to='/checkout'>
+                            <i style={{color: "whitesmoke" , textDecoration: "none"}}>
                             Checkout</i>
                         </Link>
                     </button>
