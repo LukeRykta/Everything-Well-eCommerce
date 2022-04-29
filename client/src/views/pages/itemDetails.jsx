@@ -7,7 +7,6 @@ import {useDispatch} from "react-redux";
 import {Add, Remove} from "@material-ui/icons";
 
 const ItemDetails = () => {
-
     const user = isAuthenticated();
     const apiUrl = process.env.REACT_APP_API_URL;
     const [item, setItem] = useState({})
@@ -35,10 +34,6 @@ const ItemDetails = () => {
     const handleClick = () =>{
         dispatch(addProduct({...item, quantity}));
         item.quantity -= quantity
-    }
-
-    function Previous() {
-        window.go(-1);
     }
 
     return (
@@ -92,9 +87,11 @@ const ItemDetails = () => {
                                 </button>
 
                             )}
-                            <button onClick={Previous} className="btn btn-secondary mx-1 my-1">
-                                Return
-                            </button>
+                            <Link to={"/fitness"}>
+                                <button className="btn btn-secondary mx-1 my-1">
+                                    Return
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
