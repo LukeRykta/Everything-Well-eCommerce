@@ -3,7 +3,7 @@ import "../css/CartItem.css";
 import "../css/resizeImage.css";
 import {useSelector} from "react-redux";
 import {Link} from "react-router-dom";
-import { toRemove} from "../../redux/cartRedux";
+import { toRemove, toRemoveAll} from "../../redux/cartRedux";
 import {useDispatch} from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import {useState} from "react";
@@ -13,11 +13,15 @@ import {useState} from "react";
 const CartScreen = () => {
     const KEY = process.env.REACT_APP_STRIPE;
     const cart = useSelector(state => state.cart)
-    const [stripeToken, setStripeToken] = useState(null);
+    const [stripeToken, setStripeToken] = useState(null)
+    const [promo, setPromo] = useState('')
     const dispatch = useDispatch()
     const shipping = "1.99"
     const free = "0.00"
-    const finalTotal = (cart.total+Number(cart.total === 0 ? free : shipping)+(cart.total *.0825)).toFixed(2);
+    const discount = (promo === "20OFF" ? 0.2 : free)
+    const finalTotal = (cart.total-Number(discount*cart.total)+Number(cart.total === 0 ? free : shipping)+(cart.total *.00625)).toFixed(2);
+
+
     const onToken = (token) => {
         setStripeToken(token);
     };
@@ -53,9 +57,8 @@ const CartScreen = () => {
              <div className="cartscreen_discount">
                  <h2>Promo Code</h2>
                  <input
-
+                     onChange={ event => setPromo(event.target.value)}
                      name="promo code"
-
                      className="form-control mt-4"
                      placeholder="Enter Promo Code"
                      type="text"
@@ -79,9 +82,10 @@ const CartScreen = () => {
 
                  </tr>
 
+
                  <tr>
-                     <td><span>Tax(0.08%)</span></td>
-                     <td> <span className="move_right">${(cart.total *.0825).toFixed(2)}</span></td>
+                     <td><span>Tax(6.25%)</span></td>
+                     <td> <span className="move_right">${(cart.total *.00625).toFixed(2)}</span></td>
 
                  </tr>
 
@@ -106,8 +110,9 @@ const CartScreen = () => {
                      token={onToken}
                      stripeKey={KEY}
                  >
-                    <button style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>
-                        <Link to='/checkout'><i style={{color: "whitesmoke" , textDecoration: "none"}}>
+                    <button onClick={() => dispatch(toRemoveAll(cart.products))} style={{backgroundColor: "rgba(119,82,158,1)", borderRadius: "25px"}}>
+                        <Link to='/checkout'>
+                            <i style={{color: "whitesmoke" , textDecoration: "none"}}>
                             Checkout</i>
                         </Link>
                     </button>

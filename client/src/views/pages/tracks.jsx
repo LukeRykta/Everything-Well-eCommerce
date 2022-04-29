@@ -9,7 +9,7 @@ const TrackPart = () => {
         <Row className="mt-4">
 
             <li>
-                <a><img src={require("../../views/assets/nutrition.png")} /></a>
+                <a href='/nutrition'><img src={require("../../views/assets/nutrition.png")} /></a>
 
                 <a href='/wellness'><img src={require("../../views/assets/wellness.png")} /></a>
 
