@@ -19,7 +19,7 @@ const CartScreen = () => {
     const shipping = "1.99"
     const free = "0.00"
     const discount = (promo === "20OFF" ? 0.2 : free)
-    const finalTotal = (cart.total-Number(discount*cart.total)+Number(cart.total === 0 ? free : shipping)+(cart.total *.0825)).toFixed(2);
+    const finalTotal = (cart.total-Number(discount*cart.total)+Number(cart.total === 0 ? free : shipping)+(cart.total *.00625)).toFixed(2);
 
 
     const onToken = (token) => {
