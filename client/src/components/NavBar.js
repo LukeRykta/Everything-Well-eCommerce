@@ -26,7 +26,7 @@ const NavBar = () => {
                             <Nav.Link href="/addItem">Create</Nav.Link>
                         )}
                         { user.role === 'ADMIN' && (
-                            <Nav.Link href="/Settings">Settings</Nav.Link>
+                            <Nav.Link href="/settings">Settings</Nav.Link>
                         )}
                     </Nav>
                     <Nav>
@@ -52,7 +52,7 @@ const NavBar = () => {
                         ) : (
                             <>
                                 <Nav.Link href="/login">
-                                    Login 
+                                    Login
                                 </Nav.Link>
                                 <Nav.Link eventKey={2} href="/register">
                                     Register

@@ -19,6 +19,7 @@ import AdminRoute from "./components/AdminRoute";
 import EditItem from "./views/pages/EditItem";
 import CartPage from "./views/pages/CartScreen";
 import Checkout from "./views/pages/Checkout";
+import Settings from "./views/pages/settings";
 
 
 function App () {
@@ -30,6 +31,7 @@ function App () {
                 <Route path="/tracks" element={<TrackPart />} /> //Route to track page
                 <Route element={<AdminRoute/>}>
                     <Route path="/addItem" element={<AddItem />} /> //page to create new item
+                    <Route path="/settings" element={<Settings/>} />
                 </Route>
                     <Route element={<AuthRoute />}> //Contains routes to protected pages
                 </Route>

@@ -5,12 +5,35 @@ import ItemCard from "../../components/ItemCard";
 const NutPage = () => {
     const [items, setItems] = useState([]);
     const relevant_tracks = [];
+    const [search, setSearch] = useState({
+        key: ''
+    })
 
     items.forEach(function (item){
-       if (item.track === "nutrition"){
+       if ((item.track === "nutrition")){
            relevant_tracks.push(item);
        }
     });
+
+    const handleChange = (event) => {
+        setSearch({
+            ...search,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        console.log("submit reached");
+        console.log(search.key);
+        console.log(relevant_tracks.pop());
+
+        relevant_tracks.forEach(function (relevant_track){
+            if ((relevant_track.track === "nutrition") && (relevant_track.name === search.key)){
+                relevant_tracks.push(relevant_track);
+            }
+        });
+    }
 
     useEffect(() => {
         getItems();
@@ -29,12 +52,18 @@ const NutPage = () => {
                         <div className style={{position: "relative"}}>
                         <h2>Nutrition</h2>
                         </div>
-                        <label style={{width: "67%"}}>
-                            <input
-                                className="form-control"
-                                placeholder="search"
-                            />
-                        </label>
+                        <form onSubmit={handleSubmit}>
+                            <label style={{width: "67%"}}>
+                                <input
+                                    className="form-control"
+                                    onChange={handleChange}
+                                    name="key"
+                                    value={search.key}
+                                    type="text"
+                                    placeholder="search"
+                                />
+                            </label>
+                        </form>
                     </div>
                 </div>
                 <div className="container">
