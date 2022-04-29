@@ -14,10 +14,12 @@ const CartScreen = () => {
     const KEY = process.env.REACT_APP_STRIPE;
     const cart = useSelector(state => state.cart)
     const [stripeToken, setStripeToken] = useState(null)
+    const [promo, setPromo] = useState('')
     const dispatch = useDispatch()
     const shipping = "1.99"
     const free = "0.00"
-    const finalTotal = (cart.total+Number(cart.total === 0 ? free : shipping)+(cart.total *.0825)).toFixed(2);
+    const discount = (promo === "20OFF" ? 0.2 : free)
+    const finalTotal = (cart.total-Number(discount*cart.total)+Number(cart.total === 0 ? free : shipping)+(cart.total *.0825)).toFixed(2);
 
 
     const onToken = (token) => {
@@ -55,9 +57,8 @@ const CartScreen = () => {
              <div className="cartscreen_discount">
                  <h2>Promo Code</h2>
                  <input
-
+                     onChange={ event => setPromo(event.target.value)}
                      name="promo code"
-
                      className="form-control mt-4"
                      placeholder="Enter Promo Code"
                      type="text"
@@ -80,6 +81,7 @@ const CartScreen = () => {
                      <td> <span className="move_right">${cart.total === 0 ? free : shipping}</span></td>
 
                  </tr>
+
 
                  <tr>
                      <td><span>Tax(0.08%)</span></td>
