@@ -84,8 +84,8 @@ const CartScreen = () => {
 
 
                  <tr>
-                     <td><span>Tax(0.08%)</span></td>
-                     <td> <span className="move_right">${(cart.total *.0825).toFixed(2)}</span></td>
+                     <td><span>Tax(6.25%)</span></td>
+                     <td> <span className="move_right">${(cart.total *.00625).toFixed(2)}</span></td>
 
                  </tr>
 
