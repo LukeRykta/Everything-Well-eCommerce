@@ -21,13 +21,13 @@ const Settings = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(coup);
-        await createItem(coup);
         setCoup({
             key: '',
             percent: ''
         });
 
         window.location.reload()
+        window.alert("Coupon created")
     }
 
     return (

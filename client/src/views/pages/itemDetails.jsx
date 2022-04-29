@@ -37,6 +37,10 @@ const ItemDetails = () => {
         item.quantity -= quantity
     }
 
+    function Previous() {
+        window.go(-1);
+    }
+
     return (
         <div>
             <div className="form container" style={{maxWidth: '1200px', margin: '0 auto', padding: '15px', display: 'flex', marginTop: '8%'}}>
@@ -88,10 +92,8 @@ const ItemDetails = () => {
                                 </button>
 
                             )}
-                            <button className="btn btn-secondary mx-1 my-1">
-                                <Link to="/nutrition" style={{ textDecoration: 'none', color: "white" }}>
-                                    Return
-                                </Link>
+                            <button onClick={Previous} className="btn btn-secondary mx-1 my-1">
+                                Return
                             </button>
                         </div>
                     </div>

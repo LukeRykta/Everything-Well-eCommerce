@@ -39,6 +39,7 @@ const AddItem = () => {
             description: '',
         });
         window.location.reload()
+        window.alert("Item created")
     }
 
     return (
