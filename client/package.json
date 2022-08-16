@@ -50,6 +50,6 @@
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.3",
-    "webpack": "^5.68.0"
+    "webpack": "4.0.3"
   }
 }

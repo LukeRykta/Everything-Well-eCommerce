@@ -17,7 +17,7 @@ import Account from "./views/pages/Account";
 import AuthRoute from "./components/AuthRoute";
 import AdminRoute from "./components/AdminRoute";
 import EditItem from "./views/pages/EditItem";
-import CartPage from "./views/pages/CartScreen";
+// import CartPage from "./views/pages/CartScreen";
 import Checkout from "./views/pages/Checkout";
 import Settings from "./views/pages/settings";
 
@@ -39,7 +39,7 @@ function App () {
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/account" element={<Account />} />
-                <Route path="/cart" element={<CartPage />} />
+                {/*<Route path="/cart" element={<CartPage />} />*/}
                 <Route path="/editItem/:id" element={<EditItem/>} />
                 <Route path="/todo" element={<ListTest />} />
                 <Route path="/fitness" element={<FitPage />} />

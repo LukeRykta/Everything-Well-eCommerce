@@ -111,6 +111,14 @@ a{
   background-position: revert;
   overflow: hidden;
 }
+.NutritionBackground{
+  background-image: url("../assets/nutritionBack.jpg");
+  flex: auto;
+
+  background-repeat: repeat;
+  background-position: revert;
+  overflow: hidden;
+}
 
 .HomeBackground {
   background-image: linear-gradient(to bottom right, #6f88d5, #282c34);
